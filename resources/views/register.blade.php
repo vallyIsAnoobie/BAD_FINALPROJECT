@@ -8,7 +8,7 @@
       <div class="overlap-wrapper">
         <div class="overlap">
           <div class="cover-backgrounds">
-            <img class="vector" src="img/vector-3.svg" /> <img class="img" src="img/vector-2.svg" />
+            <img class="vector" src="img/Frame 1 (2).png" /> 
           </div>
           <div class="group">
             <div class="overlap-group">

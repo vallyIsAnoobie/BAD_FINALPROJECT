@@ -1,5 +1,5 @@
 .REGISTER-PAGE {
-    background-color: #ffffff;
+    background-color: #DBA5A4;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,7 +7,7 @@
   }
   
   .REGISTER-PAGE .overlap-wrapper {
-    background-color: #ffffff;
+    background-color: #DBA5A4;
     overflow: hidden;
     width: 1440px;
     height: 1024px;
