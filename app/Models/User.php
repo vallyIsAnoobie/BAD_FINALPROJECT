@@ -2,47 +2,37 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject; // Import the JWTSubject interface
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject // Implement JWTSubject
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    // Add the necessary methods for JWTSubject interface
 
     /**
-     * The attributes that are mass assignable.
+     * Get the identifier that will be stored in the JWT.
      *
-     * @var list<string>
+     * @return mixed
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    public function getJWTIdentifier()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->getKey(); // Typically the user ID
     }
+
+    /**
+     * Get the custom claims for the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return []; // You can add custom claims here if needed, else return an empty array
+    }
+
+    // Add the fillable property
+    protected $fillable = [
+        'name',       // Add the name field
+        'email',      // Add the email field
+        'password',   // Add the password field
+    ];
 }
