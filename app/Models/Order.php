@@ -16,6 +16,8 @@ class Order extends Model
         'customerID', 'shoppingCartID', 'shippingPrice', 
         'tax', 'orderDate', 'orderStatus', 'purpose', 'orderNotes'
     ];
+    protected $table = 'orders';
+    protected $keyType = 'string';
 
     /**
      * Get the customer associated with this order.
@@ -64,6 +66,6 @@ class Order extends Model
      */
     public function orderDetails()
     {
-        return $this->hasMany(OrderDetail::class, 'orderID', 'orderID');
+        return $this->hasMany(OrderDetails::class, 'orderID');
     }
 }

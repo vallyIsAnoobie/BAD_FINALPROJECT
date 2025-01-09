@@ -16,6 +16,8 @@ class Product extends Model
         'categoryID', 'productName', 'productPrice', 'description', 'productImage',
     ];
 
+    protected $table = 'product';
+
     /**
      * Get the category this product belongs to.
      */

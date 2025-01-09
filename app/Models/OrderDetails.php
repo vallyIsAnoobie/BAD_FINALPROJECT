@@ -15,13 +15,14 @@ class OrderDetails extends Model
     protected $fillable = [
         'orderID', 'productID', 'shoppingCartID', 'quantity', 'pricePerItem',
     ];
+    protected $table = 'orderDetails';
 
     /**
      * Get the order associated with this order detail.
      */
     public function order()
     {
-        return $this->belongsTo(Order::class, 'orderID', 'orderID');
+        return $this->belongsTo(Order::class, 'orderID');
     }
 
     /**
@@ -29,7 +30,7 @@ class OrderDetails extends Model
      */
     public function product()
     {
-        return $this->belongsTo(Product::class, 'productID', 'productID');
+        return $this->belongsTo(Product::class, 'productID');
     }
 
     /**
