@@ -1,116 +1,67 @@
-.frame {
+.customer-sign-up {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
-
-html{
+body{
+  background-image: url('Group 631812.png');
   width: 100%;
   height: 100%;
-  background-image: url('/img/Frame 1 (2).png');
   overflow-y: hidden;
+
 }
 
-.frame .overlap-wrapper {
+.customer-sign-up .overlap-wrapper {
   width: 1920px;
   height: 945px;
 }
 
 @keyframes animate-enter-frames {
   from {
-    opacity: 0;
+      opacity: 0;
+      filter: blur(10px);
   }
   to {
-    opacity: 1;
+      opacity: 1;
+      filter: none;
   }
 }
 
 @keyframes animate-enter1-frames {
   from {
-    opacity: 0;
-    filter: blur(10px);
+      opacity: 0;
+      filter: blur(10px);
   }
   to {
-    opacity: 1;
-    filter: none;
+      opacity: 1;
+      filter: none;
   }
 }
 
-@keyframes animate-enter2-frames {
-  from {
-    opacity: 0;
-    filter: blur(10px);
-  }
-  to {
-    opacity: 1;
-    filter: none;
-  }
-}
-
-@keyframes animate-enter3-frames {
-  from {
-    opacity: 0;
-    filter: blur(10px);
-  }
-  to {
-    opacity: 1;
-    filter: none;
-  }
-}
-
-.frame .overlap {
+.customer-sign-up .overlap {
   position: relative;
   height: 945px;
   background-size: 100% 100%;
 }
 
-.frame .overlap-group {
+.customer-sign-up .overlap-group {
   position: absolute;
   width: 1846px;
-  height: 910px;
-  top: 0;
-  left: 0;
+  height: 859px;
+  top: 51px;
+  left: -50px; /* Adjust this value to move left */
 }
 
-.frame .group {
-  position: absolute;
-  width: 816px;
-  height: 380px;
-  top: 0;
-  left: 145px;
-  transition: all 0.2s ease;
-  display: block;
-  opacity: 0;
-  animation: animate-enter-frames 1.50s ease-in-out 2.00s 1 normal forwards;
-}
-
-
-
-.frame .img {
-  position: absolute;
-  width: 1166px;
-  height: 320px;
-  top: 353px;
-  left: 0;
-  transition: all 0.2s ease;
-  display: block;
-  opacity: 0;
-  filter: blur(10px);
-  animation: animate-enter1-frames 0.40s ease-in-out 2.00s 1 normal forwards;
-}
-
-
-
-.frame .overlap-group-wrapper {
+.customer-sign-up .group {
   position: absolute;
   width: 694px;
   height: 859px;
-  top: 51px;
+  top: 0;
   left: 1152px;
 }
 
-.frame .div {
+.customer-sign-up .div {
   position: relative;
   width: 722px;
   height: 889px;
@@ -118,7 +69,7 @@ html{
   left: -15px;
 }
 
-.frame .rectangle {
+.customer-sign-up .rectangle {
   position: absolute;
   width: 722px;
   height: 817px;
@@ -126,10 +77,7 @@ html{
   left: 0;
 }
 
-
-
-
-.frame .rectangle-2 {
+.customer-sign-up .img {
   position: absolute;
   width: 722px;
   height: 889px;
@@ -137,26 +85,27 @@ html{
   left: 0;
 }
 
-.frame .group-2 {
+.customer-sign-up .group-2 {
   position: absolute;
   width: 627px;
   height: 17px;
   top: 37px;
   left: 48px;
+
 }
 
-.frame .ellipse {
+.customer-sign-up .ellipse {
   position: absolute;
   width: 20px;
   height: 19px;
   top: -1px;
   left: -1px;
   background-color: #daa5a4;
-  border-radius: 10.06px / 9.35px;
+  border-radius: 100px;
   border-color: #ffffff;
 }
 
-.frame .ellipse-2 {
+.customer-sign-up .ellipse-2 {
   position: absolute;
   width: 20px;
   height: 19px;
@@ -167,7 +116,7 @@ html{
   border-color: #ffffff;
 }
 
-.frame .group-3 {
+.customer-sign-up .group-3 {
   position: absolute;
   width: 627px;
   height: 17px;
@@ -175,41 +124,41 @@ html{
   left: 48px;
 }
 
-.frame .don-t-loaf-around {
+.customer-sign-up .don-t-loaf-around {
   position: absolute;
   width: 634px;
-  top: 70px;
+  top: 54px;
   left: 47px;
-  font-family: 'Oliver', Helvetica;
+  font-family: "Oliver", Helvetica;
   font-weight: 400;
   color: transparent;
   font-size: 34px;
   text-align: center;
   letter-spacing: 1.70px;
-  line-height: Truepx;
+  line-height: normal;
 }
 
-.frame .text-wrapper {
+.customer-sign-up .text-wrapper {
   color: #000000;
   letter-spacing: 0.58px;
 }
 
-.frame .span {
+.customer-sign-up .span {
   color: #c08988;
   letter-spacing: 0.58px;
 }
 
-.frame .group-4 {
+.customer-sign-up .group-4 {
   position: absolute;
-  width: 259px;
-  height: 108px;
-  top: 197px;
-  left: 102px;
+  width: 251px;
+  height: 112px;
+  top: 174px;
+  left: 98px;
 }
 
-.frame .text-wrapper-2 {
+.customer-sign-up .text-wrapper-2 {
   position: absolute;
-  width: 144px;
+  width: 139px;
   top: 0;
   left: 5px;
   font-family: "Karla-Medium", Helvetica;
@@ -217,40 +166,45 @@ html{
   color: #000000;
   font-size: 25px;
   letter-spacing: 0.75px;
-  line-height: Truepx;
-  white-space: nowrap;
+  line-height: normal;
 }
 
-.frame .rectangle-3 {
+.customer-sign-up .rectangle-2 {
   position: absolute;
-  width: 257px;
-  height: 65px;
-  top: 43px;
-  left: 0;
+  width: 249px;
+  height: 67px;
+  top: 45px;
+  left: 0px;
   background-color: #ffffff;
   border-radius: 50px;
   border: 1px solid;
   border-color: #000000;
   box-shadow: inset 0px 4px 4px #00000040;
-  transition: all 0.2s ease;
-  opacity: 0;
-  filter: blur(10px);
-  animation: animate-enter2-frames 0.40s ease-in-out 0.00s 1 normal forwards;
+  font-family: 'Winkle',sans-serif;
+  font-size: 22px;
+  color: #C68F8E;
+  padding-left: 15px; /* Adds space to the left of the text */
 }
 
-
-
-.frame .group-5 {
-  position: absolute;
-  width: 259px;
-  height: 108px;
-  top: 197px;
-  left: 394px;
+.customer-sign-up .rectangle-2::placeholder {
+  color: #aaaaaa; /* Change to the color of the placeholder text */
 }
 
-.frame .text-wrapper-3 {
+.customer-sign-up .overlap-group-2:hover {
+  transform: scale(0.9); /* Slightly increase the scale for a heart-like effect */
+}
+
+.customer-sign-up .group-5 {
   position: absolute;
-  width: 138px;
+  width: 251px;
+  height: 112px;
+  top: 174px;
+  left: 381px;
+}
+
+.customer-sign-up .text-wrapper-3 {
+  position: absolute;
+  width: 133px;
   top: 0;
   left: 13px;
   font-family: "Karla-Medium", Helvetica;
@@ -258,69 +212,41 @@ html{
   color: #000000;
   font-size: 25px;
   letter-spacing: 0.75px;
-  line-height: Truepx;
-  white-space: nowrap;
+  line-height: normal;
 }
 
-.frame .rectangle-4 {
+.customer-sign-up .rectangle-3 {
   position: absolute;
-  width: 257px;
-  height: 65px;
-  top: 43px;
-  left: 0;
-  background-color: #ffffff;
-  border-radius: 50px;
-  border: 1px solid;
-  border-color: #000000;
-  box-shadow: inset 0px 4px 4px #00000040;
-}
-
-.frame .group-6 {
-  position: absolute;
-  width: 549px;
-  height: 109px;
-  top: 333px;
-  left: 107px;
-}
-
-.frame .text-wrapper-4 {
-  position: absolute;
-  width: 75px;
-  top: 0;
-  left: 5px;
-  font-family: "Karla-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 25px;
-  letter-spacing: 0.75px;
-  line-height: Truepx;
-  white-space: nowrap;
-}
-
-.frame .rectangle-5 {
-  position: absolute;
-  width: 547px;
-  height: 65px;
+  width: 249px;
+  height: 67px;
   top: 45px;
   left: 0;
   background-color: #ffffff;
   border-radius: 50px;
   border: 1px solid;
   border-color: #000000;
+  font-family: 'Winkle',sans-serif;
+  font-size: 22px;
+  padding-left: 15px; /* Adds space to the left of the text */
+  color: #C68F8E;
   box-shadow: inset 0px 4px 4px #00000040;
 }
 
-.frame .group-7 {
-  position: absolute;
-  width: 549px;
-  height: 110px;
-  top: 469px;
-  left: 107px;
+.customer-sign-up .rectangle-3::placeholder {
+  color: #aaaaaa; /* Change to the color of the placeholder text */
 }
 
-.frame .text-wrapper-5 {
+.customer-sign-up .group-6 {
   position: absolute;
-  width: 124px;
+  width: 531px;
+  height: 114px;
+  top: 315px;
+  left: 103px;
+}
+
+.customer-sign-up .text-wrapper-4 {
+  position: absolute;
+  width: 72px;
   top: 0;
   left: 5px;
   font-family: "Karla-Medium", Helvetica;
@@ -328,14 +254,14 @@ html{
   color: #000000;
   font-size: 25px;
   letter-spacing: 0.75px;
-  line-height: Truepx;
-  white-space: nowrap;
+  line-height: normal;
+
 }
 
-.frame .rectangle-6 {
+.customer-sign-up .rectangle-4 {
   position: absolute;
-  width: 547px;
-  height: 65px;
+  width: 529px;
+  height: 67px;
   top: 46px;
   left: 0;
   background-color: #ffffff;
@@ -343,19 +269,27 @@ html{
   border: 1px solid;
   border-color: #000000;
   box-shadow: inset 0px 4px 4px #00000040;
+  font-family: 'Winkle',sans-serif;
+  font-size: 22px;
+  padding-left: 15px; /* Adds space to the left of the text */
+  color: #C68F8E;
 }
 
-.frame .group-8 {
-  position: absolute;
-  width: 549px;
-  height: 107px;
-  top: 610px;
-  left: 107px;
+.customer-sign-up .rectangle-4::placeholder {
+  color: #aaaaaa; /* Change to the color of the placeholder text */
 }
 
-.frame .text-wrapper-6 {
+.customer-sign-up .group-7 {
   position: absolute;
-  width: 243px;
+  width: 531px;
+  height: 115px;
+  top: 457px;
+  left: 103px;
+}
+
+.customer-sign-up .text-wrapper-5 {
+  position: absolute;
+  width: 120px;
   top: 0;
   left: 5px;
   font-family: "Karla-Medium", Helvetica;
@@ -363,33 +297,99 @@ html{
   color: #000000;
   font-size: 25px;
   letter-spacing: 0.75px;
-  line-height: Truepx;
-  white-space: nowrap;
+  line-height: normal;
 }
 
-.frame .rectangle-7 {
+.customer-sign-up .rectangle-5 {
   position: absolute;
-  width: 547px;
-  height: 65px;
-  top: 42px;
+  width: 529px;
+  height: 67px;
+  top: 48px;
   left: 0;
   background-color: #ffffff;
   border-radius: 50px;
   border: 1px solid;
   border-color: #000000;
   box-shadow: inset 0px 4px 4px #00000040;
+  font-family: 'Winkle',sans-serif;
+  font-size: 22px;
+  padding-left: 15px; /* Adds space to the left of the text */
+  color: #C68F8E;
 }
 
-.frame .button-wrapper {
+.customer-sign-up .rectangle-5::placeholder {
+  color: #aaaaaa; /* Change to the color of the placeholder text */
+}
+
+.customer-sign-up .group-8 {
+  position: absolute;
+  width: 531px;
+  height: 111px;
+  top: 603px;
+  left: 103px;
+}
+
+.customer-sign-up .text-wrapper-6 {
+  position: absolute;
+  width: 235px;
+  top: 0;
+  left: 5px;
+  font-family: "Karla-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 25px;
+  letter-spacing: 0.75px;
+  line-height: normal;
+}
+
+.customer-sign-up .rectangle-6 {
+  position: absolute;
+  width: 529px;
+  height: 67px;
+  top: 44px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: inset 0px 4px 4px #00000040;
+  font-family: 'Winkle',sans-serif;
+  font-size: 22px;
+  padding-left: 15px; /* Adds space to the left of the text */
+  color: #C68F8E;
+}
+
+.customer-sign-up .rectangle-6::placeholder {
+  color: #aaaaaa; /* Change to the color of the placeholder text */
+}
+
+.customer-sign-up .overlap-group-wrapper {
+  position: absolute;
+  width: 274px;
+  height: 61px;
+  top: 768px;
+  left: 229px;
+}
+
+.customer-sign-up .div-wrapper {
   position: relative;
-  width: 30px; /* Match the button width */
-  height: 100px; /* Match the button height */
-  top: 745px;
-  left: 235px;
+  width: 272px;
+  height: 61px;
+  border-radius: 50px;
+  color: #FEFFF8;
+  background-color: #DBA5A4;
+  border: #DBA5A4;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.customer-sign-up .div-wrapper:hover {
+  background-color: #BA8B8B;  /* Pink color when hovered */
+  transform: scale(1.05);      /* Slightly enlarges the button */
 }
 
 
-.frame .text-wrapper-7 {
+.customer-sign-up .text-wrapper-7 {
   position: absolute;
   width: 130px;
   top: 14px;
@@ -400,96 +400,146 @@ html{
   font-size: 25px;
   text-align: center;
   letter-spacing: 0.75px;
-  line-height: Truepx;
+  line-height: normal;
+border: none;
 }
 
-.frame .group-wrapper {
+.customer-sign-up .group-9 {
   position: absolute;
-  width: 268px;
-  height: 173px;
-  top: 716px;
-  left: 406px;
+  width: 1166px;
+  height: 285px;
+  top: 329px;
+  left: 0;
   transition: all 0.2s ease;
-  opacity: 0;
-  filter: blur(10px);
-  animation: animate-enter3-frames 0.40s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  z-index: -1;
 }
 
-.frame .group-wrapper:hover {
-  transform: scale(0.9);
+
+
+.customer-sign-up .group-wrapper {
+  position: absolute;
+  width: 227px;
+  height: 167px;
+  top: 714px;
+  left: 484px;
 }
 
-.frame .group-9 {
-  width: 272px;
-  height: 173px;
+.customer-sign-up .group-10 {
+  width: 231px;
+  height: 167px;
 }
 
-.frame .overlap-group-3 {
+.customer-sign-up .overlap-group-2 {
   position: relative;
-  width: 268px;
-  height: 173px;
+  width: 227px;
+  height: 167px;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add ease-in-out effect */
+
+  
 }
 
-.frame .vector {
+.customer-sign-up .vector {
   position: absolute;
-  width: 221px;
-  height: 173px;
+  width: 187px;
+  height: 167px;
   top: 0;
-  left: 21px;
+  left: 18px;
 }
 
-.frame .text-wrapper-8 {
+.customer-sign-up .text-wrapper-8 {
   position: absolute;
-  width: 268px;
+  width: 227px;
   top: 85px;
   left: 0;
-  font-family: 'Last Christmas PERSONAL USE-Regular';
-  font-style: italic;
+  font-family: "Last Christmas PERSONAL USE-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 35px;
+  font-size: 24px;
   text-align: center;
-  letter-spacing: 1.75px;
-  line-height: Truepx;
+  letter-spacing: 1.20px;
+  line-height: normal;
 }
 
-.frame .text-wrapper-9 {
+.customer-sign-up .text-wrapper-9 {
   position: absolute;
-  width: 268px;
-  top: 42px;
+  width: 227px;
+  top: 49px;
   left: 0;
-  font-family: 'Oliver', Helvetica;
+  font-family: 'Oliver', sans-serif;
   font-weight: 400;
   color: #ffffff;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
-  letter-spacing: 2.50px;
-  line-height: Truepx;
+  letter-spacing: 2.00px;
+  line-height: normal;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-.new-button {
-  width: 290px; /* Set a custom width for the button */
-  height: 65px; /* Set a custom height for the button */
-  background-color: #DBA5A4; /* Pink background */
-  color: #fff; /* White text */
-  border: none; /* Remove the border */
-  border-radius: 70px; /* Rounded corners */
-  font-size: 22px; /* Adjust font size */
-  font-weight: bold; /* Make text bold */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Smooth color transition */
-  margin: 0 auto; /* Center button horizontally */
-  display: block; /* Ensure the button behaves like a block element */
-  text-align: center; /* Center the text inside the button */
-  line-height: 60px; 
+.customer-sign-up .group-11 {
+  position: absolute;
+  width: 739px;
+  height: 343px;
+  top: 31px;
+  left: 228px;
 }
 
-
-.new-button:hover {
-  background-color: #BC7978; /* Darker pink when hovered */
+.customer-sign-up .overlap-2 {
+  position: relative;
+  width: 735px;
+  height: 343px;
+  background-image: url('brush 1.png');
+  background-size: 100% 100%;
 }
 
-.group-5{
-  font-size: 20px;
+.customer-sign-up .text-wrapper-10 {
+  position: absolute;
+  width: 446px;
+  top: 109px;
+  left: 143px;
+  font-family: "Oliver", Helvetica;
+  font-weight: 400;
+  color: #21435b;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 3.00px;
+  line-height: normal;
+}
+
+.customer-sign-up .text-wrapper-11 {
+  position: absolute;
+  top: 180px;
+  left: 272px;
+  font-family: "Sora-Bold", Helvetica;
+  font-weight: 700;
+  color: #21435b;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 1.50px;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: 'Oliver'; /* The name you'll use in your CSS */
+  src:url('Oliver-Regular.ttf') format('truetype'); /* Older fallback */
+  font-weight: normal; /* Optional: Specify weight */
+  font-style: normal; /* Optional: Specify style */
+}
+
+@font-face {
+  font-family: 'Winkle';
+  src: url('Winkle-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.customer-sign-up .rectangle-2:focus,
+.customer-sign-up .rectangle-3:focus,
+.customer-sign-up .rectangle-4:focus,
+.customer-sign-up .rectangle-5:focus,
+.customer-sign-up .rectangle-6:focus {
+  border: 3px solid #C68F8E; /* Pink border */
+  outline: none;
+  
 }

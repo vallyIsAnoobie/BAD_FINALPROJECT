@@ -2,19 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}" />
-
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="register.css" />
   </head>
   <body>
-    <div class="frame">
+    <div class="customer-sign-up">
       <div class="overlap-wrapper">
         <div class="overlap">
           <div class="overlap-group">
-            <img class="group" src="img/logo.png" />
-            <img class="img" src="img/bunny.png" />
-            <div class="overlap-group-wrapper">
+            <div class="group">
               <div class="div">
-                <img class="rectangle-2" src="img/Rectangle.png" />
+                <img class="img" src="rectangle 6416.png" />
                 <div class="group-2">
                   <div class="ellipse"></div>
                   <div class="ellipse-2"></div>
@@ -28,47 +27,93 @@
                   <span class="span">register</span>
                   <span class="text-wrapper"> today and rise with us!”</span>
                 </p>
-                <form>
                 <div class="group-4">
-                <label for="first-name" class="text-wrapper-2">First Name</label>
-    <input type="text" id="first-name" class="rectangle-3" name="first-name" required>
-  </div>
-  <div class="group-5">
-    <label for="last-name" class="text-wrapper-3">Last Name</label>
-    <input type="text" id="last-name" class="rectangle-4" name="last-name" required>
-  </div>
-  <div class="group-6">
-    <label for="email" class="text-wrapper-4">Email</label>
-    <input type="email" id="email" class="rectangle-5" name="email" required>
-  </div>
-  
-  <div class="group-7">
-    <label for="password" class="text-wrapper-5">Password</label>
-    <input type="password" id="password" class="rectangle-6" name="password" required>
-  </div>
-  
-  <div class="group-8">
-    <label for="reenter-password" class="text-wrapper-6">Re-enter Password</label>
-    <input type="password" id="reenter-password" class="rectangle-7" name="reenter-password" required>
-  </div>
-  <div class="button-wrapper">
-  <button type="submit" class="new-button">Register</button>
-</div>
-                </form>
+                  <label class="text-wrapper-2" for="first-name">First Name</label>
+                  <input
+                    class="rectangle-2"
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    placeholder="Enter your first name"
+                    required
+                  />
+                  <p id="first-name-display"></p> <!-- Display text here -->
+                </div>
+                <div class="group-5">
+                  <label class="text-wrapper-3" for="last-name">Last Name</label>
+                  <input
+                    class="rectangle-3"
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    placeholder="Enter your last name"
+                    required
+                  />
+                  <p id="last-name-display"></p> <!-- Display text here -->
+                </div>
+                <div class="group-6">
+                  <label class="text-wrapper-4" for="email">Email</label>
+                  <input
+                    class="rectangle-4"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <p id="email-display"></p> <!-- Display text here -->
+                </div>
+                <div class="group-7">
+                  <label class="text-wrapper-5" for="password">Password</label>
+                  <input
+                    class="rectangle-5"
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <p id="password-display"></p> <!-- Display text here -->
+                </div>
+                <div class="group-8">
+                  <label class="text-wrapper-6" for="confirm-password">Re-enter password</label>
+                  <input
+                    class="rectangle-6"
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    placeholder="Re-enter your password"
+                    required
+                  />
+                  <p id="confirm-password-display"></p> <!-- Display text here -->
+                </div>
+                <div class="overlap-group-wrapper">
+                  <button type="submit" class="div-wrapper">
+                    <div class="text-wrapper-7">Register</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img class="group-9" src="group 631749.png" />
+          </div>
+          <div class="group-wrapper">
+            <div class="group-10">
+              <div class="overlap-group-2">
+                <img class="vector" src="vector.png" />
+                <div class="text-wrapper-8">here</div>
+                <a href="login.html" class="text-wrapper-9">Login</a>
               </div>
             </div>
           </div>
-          <div class="group-wrapper">
-            <div class="group-9">
-              <div class="overlap-group-3">
-                <img class="vector" src="img/vector.png" />
-                <div class="text-wrapper-8">here</div>
-                <div class="text-wrapper-9">Login</div>
-              </div>
+          <div class="group-11">
+            <div class="overlap-2">
+              <div class="text-wrapper-10">Maison Burro</div>
+              <div class="text-wrapper-11">バターケーキ</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </body>
 </html>
