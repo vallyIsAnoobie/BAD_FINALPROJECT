@@ -5,7 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
-    return view('register');
+    return view('splashscreen');
 });
 
 // Route::get('/product', function () {
