@@ -1,38 +1,53 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\OrderDetails;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+// class OrdersController extends Controller
+// {
+//     public function showOrderSummary($orderId)
+//     {
+//         // Simulating "No Order" by hardcoding the absence of order details
+//         $noOrder = true;  // Simulate no order found
+//         $order = null;    // No order found
+//         $orderDetails = [];  // Empty order details
+//         $totalItems = 0;
+//         $totalPrice = 0;
+//         $status = null;
+
+//         // Simulate having an order with details if orderId == 1
+//         if ($orderId == 1) {
+//             $noOrder = false; 
+//             $order = (object)[
+//                 'orderStatus' => 'Pending'
+//             ];
+//             $orderDetails = collect([
+//                 (object)[
+//                     'productName' => 'Sample Product',
+//                     'productID' => 1,
+//                     'quantity' => 2,
+//                     'productPrice' => 100
+//                 ]
+//             ]);
+//             $totalItems = 2;
+//             $totalPrice = 200;
+//         }
+
+//         // Return the view with the simulated order or no order scenario
+//         return view('order', compact('order', 'orderDetails', 'totalItems', 'totalPrice', 'status', 'noOrder'));
+//     }
+// }
+
 
 
 class OrderController extends Controller
 {
-    public function showOrderSummary($orderId)
-{
-    // Fetch the order based on the order ID
-    $order = Order::findOrFail($orderId);
-
-    // Fetch order details for the specific order using the order_id
-     // Use a JOIN to fetch the order details with the associated product data
-     $orderDetails = DB::table('orderDetails')
-     ->join('product', 'orderDetails.productID', '=', 'product.productID')  // JOIN products on product_id
-     ->where('orderDetails.orderID', '=', $orderId)  // Filter by order ID
-     ->select('orderDetails.*', 'product.productName', 'product.productID', 'product.productPrice')  // Select the columns you need
-     ->get();
-
-    // Calculate total items and total price
-    $totalItems = $orderDetails->sum('quantity');
-    $totalPrice = $orderDetails->sum(function ($detail) {
-        return $detail->quantity * $detail->pricePerItem;
-    });
-    // Get the status of the order (assuming `status` is an attribute in the Order model)
-    $status = $order->orderStatus;
-
-    // Return the view with necessary data
-    return view('order', compact('order', 'orderDetails', 'totalItems', 'totalPrice', 'status'));
-}
+    public function showOrder()
+    {
+        // Directly return the order page without any data processing
+        return view('order');
+    }
 }

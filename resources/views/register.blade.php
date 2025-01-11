@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
   </head>
   <body>
     <div class="customer-sign-up">
@@ -13,7 +13,7 @@
           <div class="overlap-group">
             <div class="group">
               <div class="div">
-                <img class="img" src="rectangle 6416.png" />
+                <img class="img" src="img/rectangle 6416.png" />
                 <div class="group-2">
                   <div class="ellipse"></div>
                   <div class="ellipse-2"></div>
@@ -94,15 +94,15 @@
                 </div>
               </div>
             </div>
-            <img class="group-9" src="group 631749.png" />
+            <img class="group-9" src="img/group 631749.png" />
           </div>
           <div class="group-wrapper">
             <div class="group-10">
               <div class="overlap-group-2">
-                <img class="vector" src="vector.png" />
+                <img class="vector" src="img/vector.png" />
                 <div class="text-wrapper-8">here</div>
-                <a href="login.html" class="text-wrapper-9">Login</a>
-              </div>
+                <a href="{{ route('login') }}" class="text-wrapper-9">Login</a>
+                </div>
             </div>
           </div>
           <div class="group-11">

@@ -2,81 +2,75 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Tymon\JWTAuth\Facades\JWTAuth;
-use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User; // Assuming you're using the default User model
 
 class AuthController extends Controller
 {
     /**
-     * Verify the validity of a token.
+     * Handle user registration (sign up).
      *
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function checkToken(Request $request)
+    public function signup(Request $request)
     {
-        try {
-            // Attempt to parse the token and authenticate the user
-            $user = JWTAuth::parseToken()->authenticate();
-            
-            return response()->json([
-                'message' => 'Token is valid',
-                'user' => $user
-            ]);
-        } catch (\Exception $e) {
-            // Handle invalid or expired token
-            return response()->json(['error' => 'Token is invalid or expired'], 401);
-        }
+        // Validate input
+        $request->validate([
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6|confirmed', // Ensure password confirmation
+        ]);
+
+        // Create the user with a hashed password
+        $user = User::create([
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        // Automatically log in the user after successful signup
+        Auth::login($user);
+
+        // Return a response (could redirect to a home page or a success message)
+        return redirect()->route('home');
     }
 
     /**
-     * Handle user login and return JWT token.
+     * Handle user login.
      *
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $request)
     {
-        // Validate the request (ensure email and password are provided)
-        $credentials = $request->only('email', 'password');
+        // Validate input
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-        if (Auth::attempt($credentials)) {
-            // Authentication successful, generate the token
-            $user = Auth::user();
-            $token = JWTAuth::fromUser($user);
-
-            // Redirect to the home page with the token
-            return redirect()->route('home')->with('token', $token);
-        } else {
-            // Authentication failed
-            return back()->withErrors(['email' => 'Invalid email or password']);
+        // Attempt to authenticate the user
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            // Successful login
+            return redirect()->route('home');
         }
+
+        // Failed login, return with error
+        return back()->withErrors(['email' => 'The provided credentials do not match our records.']);
     }
 
-    /**
-     * Handle user logout by invalidating the token.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function logout()
-    {
-        try {
-            JWTAuth::invalidate(JWTAuth::getToken());
-            return response()->json(['message' => 'Logout successful']);
-        } catch (JWTException $e) {
-            return response()->json(['error' => 'Could not log out'], 500);
-        }
-    }
+
 
     /**
-     * Protected route to demonstrate authentication.
+     * A protected home route (only accessible after login).
      *
      * @return \Illuminate\Http\JsonResponse
      */
     public function home()
     {
-        // Access user attached by middleware
-        $user = request()->get('user');
+        // Access the authenticated user
+        $user = Auth::user();
+
         return response()->json([
             'message' => 'Welcome to the home page!',
             'user' => $user
