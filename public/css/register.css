@@ -8,7 +8,7 @@ body{
   background-image: url('/img/Group 631812.png');
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 
 }
 
@@ -191,7 +191,7 @@ body{
 }
 
 .customer-sign-up .overlap-group-2:hover {
-  transform: scale(0.9); /* Slightly increase the scale for a heart-like effect */
+  transform: scale(1.1);
 }
 
 .customer-sign-up .group-5 {
@@ -552,3 +552,4 @@ cursor: pointer;
   outline: none;
   
 }
+

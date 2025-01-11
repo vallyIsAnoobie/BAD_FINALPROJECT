@@ -208,24 +208,29 @@ to {
 }
 
 .customer-log-in .div-wrapper {
-  position: absolute;
+  position: relative;
   width: 251px;
   height: 61px;
   top: 745px;
   left: 326px;
-
+border: none;
 
   border-radius: 50px;
   color: #FEFFF8;
-  background-color: #DBA5A4;
+  background-color: #d1cabd;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.customer-log-in .div-wrapper:hover {
+  background-color: #CFC5B3;  /* Pink color when hovered */
+  transform: scale(1.05);      /* Slightly enlarges the button */
+}
+
 
 .customer-log-in .overlap-2 {
   position: relative;
   width: 249px;
   height: 61px;
-  background-color: #d1cabd;
   border-radius: 50px;
 }
 
@@ -234,8 +239,8 @@ to {
   width: 79px;
   top: 14px;
   left: 85px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
   color: #ffffff;
   font-size: 25px;
   text-align: center;
@@ -244,6 +249,8 @@ to {
   border: none;
 
 }
+
+
 
 
 .customer-log-in .ellipse {

@@ -51,8 +51,8 @@
             <span class="text-wrapper-5">Your favorite treats are waiting</span>
           </p>
           <button type="submit" class="div-wrapper">
-          <div class="overlap-2"><div class="text-wrapper-6">Login</div></div>
-          </button>          
+                    <div class="text-wrapper-6">Login</div>
+                  </button>          
           <div class="ellipse"></div>
           <div class="ellipse-2"></div>
           <div class="ellipse-3"></div>
