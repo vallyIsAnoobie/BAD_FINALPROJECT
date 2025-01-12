@@ -3,6 +3,7 @@ body{
     height: 100%;
     background-color: #fffbf3;
     overflow-x: hidden;
+
 }
 
 .homepage-rill {
@@ -1529,6 +1530,113 @@ color: #21435b;
     background-image: url('/img/social.png');
     background-size: 100% 100%;
   }
+
+  .share {
+    background-image: url('/img/sticky.png');
+    background-size: contain;
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: fixed;  /* Change to fixed to keep the button in a fixed position */
+    bottom: 20px;  /* 20px from the bottom of the screen */
+    right: 20px;   /* 20px from the right of the screen */
+    z-index: 999;
+    text-align: center;
+    overflow: hidden;
+    line-height: 65px;
+    font-size: 48px;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.one, .two {
+  position: fixed;
+  width: 100px; /* Smaller than .share */
+  height: 100px; /* Smaller than .share */
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 49px;
+  z-index: 998; /* Ensure it's behind the .share button */
+  font-size: 1.5em;
+  bottom: 20px; /* Align with .share */
+  right: 20px;  /* Align with .share */
+  transform: translate(0, 0); /* Initially behind .share */
+  transition: transform .3s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.one {
+  background-image: url('/img/sticky.png');
+}
+
+.two {
+  background-image: url('/img/chatbotz.png');
+  border-radius: 0;
+  right:28px;
+  bottom:27px;
+}
+
+
+.fas.fa-paw {
+  font-size: 50px;
+  color: #fff;
+  padding: 10px;
+padding-top:30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fas.fa-paw:hover {
+  color: #FFFBF3;
+  transform: scale(1.2);
+}
+
+.fa-solid.fa-volume-high:hover {
+  color: #ff2e2e; /* Change color on hover */
+  transform: rotate(10deg); /* Slight rotation on hover */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+
+.fa-solid.fa-volume-high {
+  position: absolute;
+  top: 30px;
+  font-size: 35px;
+  right:30px;
+  cursor: pointer;
+
+}
+
+      /* Style for muted state */
+      .one.muted {
+        color: red;  /* Red when muted */
+
+
+    }
+
+    /* Optional: to make the button more prominent */
+    .one i {
+      
+        transition: color 0.3s ease;
+    }
+
+.chat{
+  position: absolute;
+  top: 23px;
+  right:28px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+
+.chat:hover{
+  transform: scale(1.1);
+}
+
 
   .sidelogo{
     height: auto;

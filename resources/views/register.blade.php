@@ -27,40 +27,47 @@
                   <span class="span">register</span>
                   <span class="text-wrapper"> today and rise with us!”</span>
                 </p>
+
+                <form method="POST" action="{{ route('register.submit') }}">
+                @csrf
+
                 <div class="group-4">
-                  <label class="text-wrapper-2" for="first-name">First Name</label>
+                  <label class="text-wrapper-2" for="first_name">First Name</label>
                   <input
                     class="rectangle-2"
                     type="text"
-                    id="first-name"
-                    name="first-name"
+                    id="first_name"
+                    name="first_name"
                     placeholder="Enter your first name"
                     required
                   />
+                
                   <p id="first-name-display"></p> <!-- Display text here -->
                 </div>
                 <div class="group-5">
-                  <label class="text-wrapper-3" for="last-name">Last Name</label>
+                  <label class="text-wrapper-3" for="last_name">Last Name</label>
                   <input
                     class="rectangle-3"
                     type="text"
-                    id="last-name"
-                    name="last-name"
+                    id="last_name"
+                    name="last_name"
                     placeholder="Enter your last name"
                     required
                   />
+                 
                   <p id="last-name-display"></p> <!-- Display text here -->
                 </div>
                 <div class="group-6">
-                  <label class="text-wrapper-4" for="email">Email</label>
+                  <label class="text-wrapper-4" for="custEmail">Email</label>
                   <input
                     class="rectangle-4"
                     type="email"
-                    id="email"
-                    name="email"
+                    id="custEmail"
+                    name="custEmail"
                     placeholder="Enter your email"
                     required
                   />
+                 
                   <p id="email-display"></p> <!-- Display text here -->
                 </div>
                 <div class="group-7">
@@ -73,18 +80,20 @@
                     placeholder="Enter your password"
                     required
                   />
+                 
                   <p id="password-display"></p> <!-- Display text here -->
                 </div>
                 <div class="group-8">
-                  <label class="text-wrapper-6" for="confirm-password">Re-enter password</label>
+                  <label class="text-wrapper-6" for="password_confirmation">Re-enter password</label>
                   <input
                     class="rectangle-6"
                     type="password"
-                    id="confirm-password"
-                    name="confirm-password"
+                    id="password_confirmation"
+                    name="password_confirmation"
                     placeholder="Re-enter your password"
                     required
                   />
+                 
                   <p id="confirm-password-display"></p> <!-- Display text here -->
                 </div>
                 <div class="overlap-group-wrapper">
@@ -92,6 +101,18 @@
                     <div class="text-wrapper-7">Register</div>
                   </button>
                 </div>
+                @if ($errors->any())
+                <div style="color: red; font-size: 17px; font-family:'Times New Roman', Times, serif; margin-top: 10px;left:90px; top:725px;position:relative;width:600px;">
+                <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+        
+                </form>
+
               </div>
             </div>
             <img class="group-9" src="img/group 631749.png" />

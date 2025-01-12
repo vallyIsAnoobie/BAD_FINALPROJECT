@@ -19,15 +19,18 @@
             </div>
           </div>
           <img class="rectangle" src="img/rectangle 6412.png" />
+          <form method="POST" action="{{ route('login.submit') }}">
+          @csrf
+
           <div class="group-2">
-            <!-- Email input field -->
-            <div class="group-3">
-              <label class="text-wrapper-2" for="email">Email</label>
+
+          <div class="group-3">
+              <label class="text-wrapper-2" for="custEmail">Email</label>
               <input
                 class="rectangle-2"
                 type="email"
-                id="email"
-                name="email"
+                id="custEmail"
+                name="custEmail"
                 placeholder="Enter your email"
                 required
               />
@@ -44,15 +47,31 @@
                 required
               />
             </div>
+            
+            @if ($errors->any())
+            <div style="color: red; font-size: 16px; font-family:'Times New Roman', Times, serif; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; border-radius: 5px; margin-top: 10px; top:300px;position:relative;">
+            <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
           </div>
+         
+          <button type="submit" class="div-wrapper">
+    <div class="text-wrapper-6">Login</div>
+  </button>
+  
+
           <p class="welcome-back-your">
             <span class="span">Welcome back!</span>
             <span class="text-wrapper-4"> <br /></span>
             <span class="text-wrapper-5">Your favorite treats are waiting</span>
           </p>
-          <button type="submit" class="div-wrapper">
-                    <div class="text-wrapper-6">Login</div>
-                  </button>          
+       
+</form>      
           <div class="ellipse"></div>
           <div class="ellipse-2"></div>
           <div class="ellipse-3"></div>

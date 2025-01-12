@@ -20,16 +20,31 @@
           <div class="overlap">
             <img class="vector" src="img/vector 2528.png" />
             <img class="img" src="img/vector 2529.png" />
+
+            
             <div class="group-2">
-              <div class="page"><div class="text-wrapper">Home</div></div>
-              <div class="home-wrapper"><div class="home">Menu</div></div>
+              <div class="page">
+              <a href="{{route('home') }}" class="text-wrapper">Home</a></div>
+              </div>   
+              
+              <div class="home-wrapper">
+              <a href ="{{ route('menu') }}" class="home">Menu</a>
+              </div>
+
+
+
               <div class="overlap-group-wrapper">
                 <div class="overlap-group">
                   <div class="ellipse"></div>
-                  <div class="home-2">orders</div>
+                  <div class="home-2">Orders</div>
                 </div>
               </div>
-              <div class="div-wrapper"><div class="home-3">Merchandise</div></div>
+
+              
+
+              <div class="div-wrapper">
+              <a href ="{{ route('menu') }}" class="home-3">Merchandise</a>  
+              </div>
             </div>
           </div>
         </div>

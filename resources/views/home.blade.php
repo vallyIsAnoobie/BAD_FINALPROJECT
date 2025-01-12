@@ -2,18 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Marck+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacques+Francois&family=Marck+Script&display=swap" rel="stylesheet">
-
   </head>
   <body>
+  <audio id="audio" autoplay muted>
+        <source src="/audio/Joe Hisaishi - One Summer's Day.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+  <div class="share">
+  <i class="fas fa-paw"></i>
+    </div>
+    <div class="one">
+    <i class="fa-solid fa-volume-high"></i></div>
+    <div class="two">
+  <!-- Wrapping the image inside an anchor tag to link to the URL -->
+  <a href="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/09/17/20250109175852-GAEID8DK.json" target="_blank">
+    <img class="chat" src="img/cat.png" alt="Chat Image"/>
+  </a>
+</div>
+
 
     <div class="homepage-rill">
+    
       <div class="div">
+      
         <div class="overlap">
           <img class="group" src="img/group 631912 1.png" />
           <div class="rectangle"></div>
@@ -126,12 +146,22 @@
           <div class="group-16">
             <img class="group-17" src="img/group 631796 1.png" />
             <div class="group-18">
-              <div class="group-19"><div class="text-wrapper-10">Login</div></div>
-            </div>
+          
+
+<div class="group-19">
+    @if(!empty($firstName))
+        <div class="text-wrapper-10">{{ $firstName }}</div>
+    @else
+  Login
+    @endif
+</div>
+      </div>
           </div>
           <div class="group-20">
             <img class="group-21" src="img/group 631785 1.png" />
-            <div class="group-22"><div class="text-wrapper-11">cart</div></div>
+            <div class="group-22">
+            <a href ="{{ route('shoppingcart') }}" class="text-wrapper-11">cart</a>
+</div>
           </div>
         </div>
         <div class="group-23">
@@ -278,6 +308,6 @@
     
     <script src="{{ asset('js/home.js') }}"></script>
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

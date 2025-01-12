@@ -95,8 +95,8 @@
   
   .empty-order-page .home-wrapper {
     width: 159px;
-    top: 1px;
-    left: 236px;
+    top: 31px;
+    left: 310px;
     position: absolute;
     height: 51px;
   }
@@ -117,8 +117,8 @@
   
   .empty-order-page .overlap-group-wrapper {
     width: 177px;
-    top: 1px;
-    left: 807px;
+    top: 30px;
+    left: 837px;
     position: absolute;
     height: 51px;
   }
@@ -157,8 +157,8 @@
   
   .empty-order-page .div-wrapper {
     width: 254px;
-    top: 0;
-    left: 481px;
+    top: 30px;
+    left: 511px;
     position: absolute;
     height: 51px;
   }
@@ -263,6 +263,9 @@
     white-space: nowrap;
   }
 
+  a{
+    text-decoration: none;
+  }
 
   .page:hover{
     border: 3px solid #28385A; /* Black border, adjust color and thickness */

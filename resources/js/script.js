@@ -36,6 +36,6 @@ setTimeout(() => {
 }, 6000);
 
 setTimeout(() => {
-    window.location.href = '/menu'; // Redirect to the login page
+    window.location.href = '/login'; // Redirect to the login page
 }, 7500); // Wait until the animations finish
  
