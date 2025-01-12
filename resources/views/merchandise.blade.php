@@ -56,7 +56,14 @@
           <div class="group-3">
             <img class="img" src="img/group 631796 1.png" />
             <div class="group-wrapper">
-              <div class="group-4"><div class="text-wrapper-3">Login</div></div>
+            <div class="group-4">
+    @if(!empty($firstName))
+        <div class="text-wrapper-3">{{ $firstName }}</div>
+    @else
+  Login
+    @endif
+</div>
+
             </div>
           </div>
           <div class="group-5">

@@ -139,7 +139,7 @@
               <a href ="{{ route('order') }}" class="home-2">Orders</a></div>
 
               <div class="page-3">
-              <a href ="{{ route('menu') }}" class="home-3">Merchandise</a>  
+              <a href ="{{ route('merchandise') }}" class="home-3">Merchandise</a>  
              </div>
             </div>
           </div>

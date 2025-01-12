@@ -7,6 +7,8 @@ class MenuController extends Controller
 {
     public function showMenu()
     {
-        return view('menu');  // Ensure the 'menu' view exists
+        $firstName = session('firstName', 'Login');  // Default name if not found
+
+        return view('menu', ['firstName' => $firstName]);
     }
 }

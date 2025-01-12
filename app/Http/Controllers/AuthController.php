@@ -110,22 +110,22 @@ class AuthController extends Controller
     {
         // Get the authenticated customer
         $customer = Auth::guard('customer')->user();
-    
+        
         // Check if the customer is logged in and exists
         if ($customer) {
             // Retrieve the customer details using customerID
             $customerData = Customer::where('customerID', $customer->customerID)->first();
-    
-            // Pass the first name to the view if customerData is found
+        
+            // Pass the first name to the session if customerData is found
             if ($customerData) {
                 $fullName = $customerData->customerName;
                 $firstName = explode(' ', $fullName)[0]; // Get the first part of the name
-                return view('home', ['firstName' => $firstName]);
+                session(['firstName' => $firstName]); // Store firstName in session
             }
         }
     
         // If not authenticated or customer data not found, pass a default value
-        return view('home', ['firstName' => '']);
+        return view('home', ['firstName' => session('firstName', '')]);  // You can access it in the view
     }
     
     

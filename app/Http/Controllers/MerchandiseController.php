@@ -7,6 +7,8 @@ class MerchandiseController extends Controller
 {
     public function showMerch()
     {
-        return view('merchandise');  // Ensure the 'menu' view exists
+        $firstName = session('firstName', 'Login');  // Default name if not found
+
+        return view('merchandise', ['firstName' => $firstName]);
     }
 }

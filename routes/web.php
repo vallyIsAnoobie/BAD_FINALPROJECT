@@ -6,6 +6,10 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MerchandiseController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CheckoutController;
+
+
 
 /*
 |----------------------------------------------------------------------|
@@ -34,6 +38,8 @@ Route::get('/menu', [MenuController::class, 'showMenu'])->name('menu');
 Route::get('/order', [OrderController::class, 'showOrder'])->name('order');
 Route::get('/shoppingcart', [CartController::class, 'showCart'])->name('shoppingcart');
 Route::get('/merchandise', [MerchandiseController::class, 'showMerch'])->name('merchandise');
+Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
+Route::get('/checkout', [CheckoutController::class, 'showCheckout'])->name('checkout');
 
 // Test route handled by TestController
 Route::get('/', function () {

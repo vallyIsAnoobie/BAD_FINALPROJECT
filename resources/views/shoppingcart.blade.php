@@ -19,7 +19,14 @@
         <div class="group-2">
           <img class="img" src="img/group 631796 1.png" />
           <div class="group-wrapper">
-            <div class="group-3"><div class="text-wrapper-2">Login</div></div>
+
+          <div class="group-3">
+    @if(!empty($firstName))
+        <div class="text-wrapper-2">{{ $firstName }}</div>
+    @else
+  Login
+    @endif
+</div>
           </div>
         </div>
         <div class="group-4">
@@ -63,6 +70,39 @@
         </footer>
         <div class="text-wrapper-15">Your Cart</div>
         <div class="overlap-2">
+        @if (isset($shoppingCart))
+          <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+              <tbody>
+                @foreach ($shoppingCartDetails as $index => $detail)
+                    <tr>
+                        <td class="table-column-1">{{ $index + 1 }}</td> <!-- Incrementing number for each item -->
+                        <td class="table-column-2">{{ $detail->productName }}</td> <!-- Product Name -->
+                        <td class="table-column-3">${{ number_format($detail->productPrice, 2) }}</td> <!-- Price Per Item -->
+                        <td class="table-column-4">{{ $detail->quantity }}</td> <!-- Quantity -->
+                        <td class="table-column-5">${{ number_format($detail->quantity * $detail->productPrice, 2) }}</td> <!-- Total Price (Quantity * Price) -->
+                        <td class="table-column-6"><img src="{{ asset('images/' . $detail->productImage) }}" alt="{{ $detail->productName }}" style="width: 100px;"></td> <!-- Product Image -->
+                        <td>
+                        <form action="{{ route('updateCart') }}" method="POST" style="display: inline;">
+                            @csrf
+                            <input type="hidden" name="action" value="decrease">
+                            <input type="hidden" name="detail_id" value="{{ $detail->detailID }}">
+                            <button type="submit" class="btn btn-danger btn-sm">-</button>
+                        </form>
+                        {{ $detail->quantity }}
+                        <form action="{{ route('updateCart') }}" method="POST" style="display: inline;">
+                            @csrf
+                            <input type="hidden" name="action" value="increase">
+                            <input type="hidden" name="detail_id" value="{{ $detail->detailID }}">
+                            <button type="submit" class="btn btn-success btn-sm">+</button>
+                        </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+              </table>
+          </div>
+          @else
           <div class="group-12">
             <div class="overlap-3">
               <div class="overlap-4">
@@ -73,8 +113,9 @@
             <p class="p">Add some items to cheer it up</p>
             <div class="text-wrapper-16">Your cart is lonely</div>
             <div class="overlap-5">
-            </div>
-          </div>
+            </div>            
+          </div>  
+          @endif      
         </div>
         <div class="overlap-6"><div class="text-wrapper-17">Shopping Cart</div></div>
         <div class="overlap-7">
@@ -91,9 +132,17 @@
         <div class="text-wrapper-24">Total Items</div>
         <div class="overlap-8">
           <div class="text-wrapper-25">Sub-total</div>
+          @if (isset($totalPrice))
+          <div class="text-wrapper-26">{{ $totalPrice }}</div>
+          @else
           <div class="text-wrapper-26">-</div>
+          @endif
         </div>
+        @if (isset($totalItems))
+        <div class="text-wrapper-27">{{ $totalItems }}</div>
+        @else
         <div class="text-wrapper-27">-</div>
+        @endif
         <div class="text-wrapper-28">Cart</div>
         <img class="vector-12" src="img/vector 2572.png" />
         <img class="vector-13" src="img/vector 2573.png" />

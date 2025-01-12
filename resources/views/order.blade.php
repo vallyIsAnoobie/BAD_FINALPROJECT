@@ -43,7 +43,7 @@
               
 
               <div class="div-wrapper">
-              <a href ="{{ route('menu') }}" class="home-3">Merchandise</a>  
+              <a href ="{{ route('merchandise') }}" class="home-3">Merchandise</a>  
               </div>
             </div>
           </div>
@@ -51,7 +51,13 @@
         <div class="group-3">
           <img class="group-4" src="img/Group 631796 1.png" />
           <div class="group-wrapper">
-            <div class="group-5"><div class="text-wrapper-2">Login</div></div>
+          <div class="group-5">
+    @if(!empty($firstName))
+        <div class="text-wrapper-2">{{ $firstName }}</div>
+    @else
+  Login
+    @endif
+</div>
           </div>
         </div>
         <div class="group-6">

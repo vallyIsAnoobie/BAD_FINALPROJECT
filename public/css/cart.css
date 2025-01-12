@@ -405,6 +405,40 @@
     left:339px;
     position: relative;
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 0px solid;
+    padding: 8px;
+    text-align: left;
+    font-family: "Abhaya Libre", serif;
+    color: #21435b;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.table-column-1 {
+  width: 140px;
+}
+
+.table-column-2 {
+  width: 330px;
+}
+
+.table-column-3 {
+  width: 300px;
+}
+.table-column-4 {
+  width: 200px;
+}
+.table-column-5 {
+  width: 230px;
+}
   
   .follow{
     font-family: 'Oliver',sans-serif;
