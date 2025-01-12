@@ -5,6 +5,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\MerchandiseController;
 
 /*
 |----------------------------------------------------------------------
@@ -36,6 +37,7 @@ Route::get('/order', [OrderController::class, 'showOrder'])->name('order');
 
 Route::get('/shoppingcart', [CartController::class, 'showCart'])->name('shoppingcart');
 
+Route::get('/merchandise', [MerchandiseController::class, 'showMerch'])->name('merchandise');
 
 
 // Test route handled by TestController

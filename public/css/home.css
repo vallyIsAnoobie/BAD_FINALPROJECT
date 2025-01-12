@@ -957,6 +957,13 @@ cursor:pointer;
   color: #fff;
 }
 
+a{
+text-decoration: none;
+color: #21435b;
+}
+
+
+
 /* Hover effect for the triangle */
 .btn:hover .triangle {
   border-left-color: white; /* Change the triangle color to white on hover */
@@ -1287,7 +1294,7 @@ cursor:pointer;
     position: absolute;
     width: 1920px;
     height: 463px;
-    top: 6233px;
+    top: 6248px;
     left: 0;
     background-color: #4f596c;
   }

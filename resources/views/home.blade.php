@@ -138,10 +138,12 @@
           <img class="group-24" src="img/group 631905 1.png" />
           <div class="group-25">
             <div class="overlap-group-6">
-              <button class="btn">
-                ORDER NOW
-                <span class="triangle"></span>
-              </button>
+            <button class="btn"onclick="window.location.href='{{ route('menu') }}';">
+            ORDER NOW
+  <span class="triangle"></span>
+</button>
+
+
               
             </div>
             <div class="overlap-12">
@@ -171,8 +173,8 @@
               life.
             </p>
             <div class="overlap-group-7">
-              
-              <button class="btn2">
+
+              <button class="btn2"onclick="window.location.href='{{ route('menu') }}';">
                 SHOP NOW
                 <span class="triangle2"></span>
               </button>
