@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\ShoppingCart;
+
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
@@ -13,6 +15,7 @@ class CustomerController extends Controller
     {
         return view('register.blade.php');
     }
+
 
     // Handle the registration
     public function register(Request $request)

@@ -56,7 +56,6 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-
     public function register(Request $request)
     {
         try {
@@ -64,7 +63,7 @@ class AuthController extends Controller
             $request->validate([
                 'first_name' => 'required|string|max:255',
                 'last_name' => 'required|string|max:255',
-'custEmail' => 'required|email|unique:customers,custEmail',
+                'custEmail' => 'required|email|unique:customers,custEmail',
                 'password' => 'required|min:6|confirmed',
             ]);
     
@@ -100,12 +99,22 @@ class AuthController extends Controller
             // Redirect to home page after successful registration
             return redirect()->route('home')->with('status', 'Registration successful! Welcome ' . $customer->customerName);
         } catch (\Exception $e) {
-         
+            // Log the error details for debugging
+            Log::error('Registration error', [
+                'message' => $e->getMessage(),
+                'code' => $e->getCode(),
+                'stackTrace' => $e->getTraceAsString(),
+            ]);
     
-            // Optionally, you can display more detailed errors in the response
-            return redirect()->back()->withErrors(['msg' => 'There was an error during registration. Please try again.']);
+            // Optionally, display detailed error to the user (only recommended for debugging, not in production)
+            return redirect()->back()->withErrors([
+                'msg' => 'There was an error during registration. Please try again.',
+                'error' => $e->getMessage(),
+                'code' => $e->getCode(),
+            ]);
         }
     }
+    
     public function home()
     {
         // Get the authenticated customer
@@ -121,8 +130,22 @@ class AuthController extends Controller
                 $fullName = $customerData->customerName;
                 $firstName = explode(' ', $fullName)[0]; // Get the first part of the name
                 session(['firstName' => $firstName]); // Store firstName in session
+        
+                $customerID = $customerData->customerID;
+                session(['customerID' => $customerID]);
+        
+                // Retrieve the shoppingCartID associated with the customer
+                $shoppingCart = $customerData->customerCart;
+                
+                // If a shoppingCart is found, store the shoppingCartID in the session
+                if ($shoppingCart) {
+                    session(['cartID' => $shoppingCart->shoppingCartID]);
+                } else {
+                    session(['cartID' => null]); // If no shopping cart is found
+                }
             }
         }
+        
     
         // If not authenticated or customer data not found, pass a default value
         return view('home', ['firstName' => session('firstName', '')]);  // You can access it in the view

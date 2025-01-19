@@ -1,57 +1,53 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Order;
-use App\Models\OrderDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    public function showOrder()
+    /**
+     * Show the order summary for the logged-in customer.
+     */
+    public function showOrderSummary()
     {
-        // Directly return the order page without any data processing
-        return view('order');
-    
+        // Retrieve the customerID and firstName from session
+        $customerID = session('customerID');
+        $firstName = session('firstName', 'Login');
 
-
-        $firstName = session('firstName', 'Login');  // Default name if not found
-
-        return view('menu', ['firstName' => $firstName]);
-}
-    public function showOrderSummary($orderId)
-    {
-        // Simulating "No Order" by hardcoding the absence of order details
-        $noOrder = true;  // Simulate no order found
-        $order = null;    // No order found
-        $orderDetails = [];  // Empty order details
-        $totalItems = 0;
-        $totalPrice = 0;
-        $status = null;
-
-        // Simulate having an order with details if orderId == 1
-        if ($orderId == 1) {
-            $noOrder = false; 
-            $order = (object)[
-                'orderStatus' => 'Pending'
-            ];
-            $orderDetails = collect([
-                (object)[
-                    'productName' => 'Sample Product',
-                    'productID' => 1,
-                    'quantity' => 2,
-                    'productPrice' => 100
-                ]
-            ]);
-            $totalItems = 2;
-            $totalPrice = 200;
+        // Check if customerID exists in session
+        if (!$customerID) {
+            return redirect()->route('login')->with('error', 'Please log in to view your order summary.');
         }
 
-        // Return the view with the simulated order or no order scenario
-        return view('order', compact('order', 'orderDetails', 'totalItems', 'totalPrice', 'status', 'noOrder'));
+        // Fetch the orders using the raw SQL query
+        $orders = DB::table('orders')
+            ->join('orderdetails', 'orders.orderID', '=', 'orderdetails.orderID')
+            ->join('product', 'orderdetails.productID', '=', 'product.productID')
+            ->join('customers', 'orders.customerID', '=', 'customers.customerID')
+            ->join('shoppingcart', 'orderdetails.shoppingCartID', '=', 'shoppingcart.shoppingCartID')
+            ->select(
+                'orders.orderID',
+                'customers.customerName',
+                DB::raw('SUM(orderdetails.quantity) AS total_items'),
+                'shoppingcart.totalPrice AS total_price',
+                'orders.orderStatus'
+            )
+            ->where('orders.customerID', $customerID)
+            ->groupBy('orders.orderID', 'customers.customerName', 'orders.orderStatus', 'shoppingcart.totalPrice')
+            ->get();
+
+        // Check if the orders exist
+        if ($orders->isEmpty()) {
+            return redirect()->route('order.create')->with('error', 'No orders found for this customer.');
+        }
+
+        // Return the view with the necessary data
+        return view('order', [
+            'orders' => $orders,
+            'firstName' => $firstName
+        ]);
     }
 }
-
-
-
-
