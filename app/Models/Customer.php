@@ -2,14 +2,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Customer extends Model
+class Customer extends Authenticatable
 {
     use HasFactory;
 
     // Table name and primary key
     protected $primaryKey = 'customerID';
+    protected $keyType = 'string'; // Adjust if the key type is not integer
+    public $incrementing = false; // Adjust based on your setup
+    public $timestamps = false; // If not using created_at and updated_at
 
     // Fillable fields for mass assignment
     protected $fillable = [
@@ -40,4 +43,18 @@ class Customer extends Model
     {
         return $this->hasOne(ShoppingCart::class, 'customerID', 'customerID');
     }
+
+    public function getFirstNameAttribute()
+    {
+        $nameParts = explode(' ', $this->customerName);
+        return $nameParts[0];  // First part of the name
+    }
+
+    public function getLastNameAttribute()
+    {
+        $nameParts = explode(' ', $this->customerName);
+        return $nameParts[1] ?? '';  // Second part of the name, default to empty if it doesn't exist
+    }
 }
+
+

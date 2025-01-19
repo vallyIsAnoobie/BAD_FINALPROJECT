@@ -1,57 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Summary</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container mt-5">
-    <h2 class="text-center">Order Summary</h2>
+<html>
+  <head>
+    <meta charset="utf-8" />
 
-    <!-- Check if order exists -->
-    @if($order)
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Product Name</th>
-                    <th>Product ID</th>
-                    <th>Total Items</th>
-                    <th>Total Price</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Display order information -->
-                <tr>
-                    <td>{{ $order->orderID }}</td>  <!-- Order ID -->
-                    <td>{{ $order->productName }}</td>  <!-- This assumes `product_name` is an attribute of the `Order` model -->
-                    <td>{{ $order->productID }}</td>  <!-- Product ID -->
-                    <td>{{ $totalItems }}</td>  <!-- Total Items -->
-                    <td>${{ number_format($totalPrice, 2) }}</td>  <!-- Total Price -->
-                    <td>{{ $status }}</td>  <!-- Order status -->
-                </tr>
 
-                <!-- Loop through order details -->
-                @foreach ($orderDetails as $item)
-                    <tr>
-                        <td> </td>
-                        <td>{{ $item->productID }}</td>  <!-- Access productID from product table -->
-                        <td>{{ $item->productName }}</td>  <!-- Access productName from product table -->
-                        <td>{{ $item->quantity }}</td>  <!-- Access quantity from orderDetails table -->
-                        <td>${{ number_format($item->productPrice * $item->quantity, 2) }}</td>  <!-- Total Price -->
-                        <td>{{ $item->status ?? 'No status' }}</td>  <!-- Access status from orderDetails table -->
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+
+
+
+
+
+    <link rel="stylesheet" href="{{ asset('css/orders.css') }}">
+
+  </head>
+  <body>
+    <div class="empty-order-page">
+      <div class="div">
+        <img class="maison-burro-logo" src="img/Maison Burro Logo blue 1.png" />
+        <div class="group">
+          <div class="overlap">
+            <img class="vector" src="img/vector 2528.png" />
+            <img class="img" src="img/vector 2529.png" />
+
+            
+            <div class="group-2">
+              <div class="page">
+              <a href="{{route('home') }}" class="text-wrapper">Home</a></div>
+              </div>   
+              
+              <div class="home-wrapper">
+              <a href ="{{ route('menu') }}" class="home">Menu</a>
+              </div>
+
+
+
+              <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                  <div class="ellipse"></div>
+                  <div class="home-2">Orders</div>
+                </div>
+              </div>
+
+              
+
+              <div class="div-wrapper">
+              <a href ="{{ route('merchandise') }}" class="home-3">Merchandise</a>  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-3">
+          <img class="group-4" src="img/Group 631796 1.png" />
+          <div class="group-wrapper">
+          <div class="group-5">
+    @if(!empty($firstName))
+        <div class="text-wrapper-2">{{ $firstName }}</div>
     @else
-        <p>Order not found.</p>
+  Login
     @endif
 </div>
+          </div>
+        </div>
+        <div class="group-6">
+          <img class="group-7" src="img/Group 631785 1.png" />
+          <div class="group-8"><div class="text-wrapper-3">cart</div></div>
+        </div>
+        <footer class="footer">
+          <div class="overlap-2">
+          <img class="sidelogo" src="img/group 631786.png" />
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+            <div class="group-10">
+              <div class="text-wrapper-4">Pre-order</div>
+              <div class="text-wrapper-5">Menu</div>
+              <div class="text-wrapper-6">Merchandise</div>
+              <div class="text-wrapper-7">Shopping Cart</div>
+            </div>
+            <div class="group-11">
+              <div class="text-wrapper-8">Delivery</div>
+              <div class="text-wrapper-9">Special event</div>
+              <div class="text-wrapper-10">Feedbacks</div>
+              <div class="text-wrapper-11">Online popup</div>
+            </div>
+            <div class="group-12">
+              <div class="group-13">
+                <div class="overlap-group-2"><div class="text-wrapper-12">Contact Us</div></div>
+              </div>
+              <div class="text-wrapper-13">+62 877-7000-8204</div>
+              <div class="text-wrapper-14">maisonburro@gmail.com</div>
+
+              <div class="follow">FOLLOW US!</div>
+                <img class="socialz" src="img/Group 631931.png"/>
+              
+              <div class="overlap-wrapper">
+                <div class="image-wrapper"><img class="image" src="img/image 66.png" /></div>
+              </div>
+              <div class="group-14">
+                <div class="icon-wrapper"><img class="icon" src="img/icon.png" /></div>
+              </div>
+            </div>
+            <img class="maison-burro-logo-2" src="img/maison burro logo white 1.png" />
+          </div>
+        </footer>
+        <div class="text-wrapper-15">Your Orders</div>
+        <div class="overlap-3">
+          <div class="group-15">
+            <img class="group-16" src="img/group 631846.png" />
+            <div class="text-wrapper-16">Make an order now!</div>
+            <div class="text-wrapper-17">No orders</div>
+          </div>
+        </div>
+        <img class="vector-2" src="img/dots.png" />
+        <img class="vector-3" src="img/vector 2573.png" />
+        <div class="overlap-4"><div class="text-wrapper-18">Orders</div></div>
+        <div class="overlap-5">
+          <div class="text-wrapper-19">#</div>
+          <div class="text-wrapper-20">Name</div>
+          <div class="text-wrapper-21">Product ID</div>
+          <div class="text-wrapper-22">Total Items</div>
+          <div class="text-wrapper-23">Total Price</div>
+          <div class="text-wrapper-24">Status</div>
+        </div>
+        <div class="text-wrapper-25">Order</div>
+      </div>
+    </div>
+  </body>
 </html>

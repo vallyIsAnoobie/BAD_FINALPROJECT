@@ -1,0 +1,1309 @@
+@font-face {
+    font-family: 'Abhaya Libre';
+    src: url('../fonts/abhaya-libre-regular.ttf') format('truetype'); /* Adjust the path as needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Abhaya Libre';
+    src: url('../fonts/abhaya-libre-bold.ttf') format('truetype'); /* Bold variant */
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  body{
+    background-color: #fffbf3;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+
+.checkout-page {
+    background-color: #fffbf3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .checkout-page .group-wrapper {
+    background-color: #fffbf3;
+    overflow: hidden;
+    width: 1920px;
+    height: 2424px;
+  }
+  
+  .checkout-page .group {
+    position: relative;
+    width: 1955px;
+    height: 2217px;
+    top: 55px;
+    left: -17px;
+  }
+  
+  .checkout-page .overlap-wrapper {
+    position: absolute;
+    width: 1711px;
+    height: 1611px;
+    top: 606px;
+    left: 107px;
+  }
+  
+  .checkout-page .overlap {
+    position: relative;
+    width: 1709px;
+    height: 1611px;
+  }
+  
+  .checkout-page .overlap-group {
+    position: absolute;
+    width: 1709px;
+    height: 1611px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .text-wrapper {
+    position: absolute;
+    width: 1068px;
+    top: 0;
+    left: 0;
+    font-family: "Pretty Dahlia", cursive;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 120px;
+    letter-spacing: 6.00px;
+    line-height: normal;
+  }
+  
+  .checkout-page .overlap-group-wrapper {
+    position: absolute;
+    width: 944px;
+    height: 572px;
+    top: 182px;
+    left: 0;
+  }
+  
+  .checkout-page .div {
+    position: relative;
+    width: 946px;
+    height: 574px;
+    top: -1px;
+    left: -1px;
+    background-color: #ffffff;
+    border-radius: 101px;
+    border: 1px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .group-2 {
+    position: absolute;
+    width: 814px;
+    height: 68px;
+    top: 53px;
+    left: 67px;
+  }
+  
+  .checkout-page .text-wrapper-2 {
+    width: 495px;
+    left: 2px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    color: #21435b;
+    font-size: 38px;
+    letter-spacing: 1.90px;
+    position: absolute;
+    top: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .line {
+    position: absolute;
+    width: 812px;
+    height: 2px;
+    top: 66px;
+    left: 0;
+  }
+  
+  .checkout-page .group-3 {
+    position: absolute;
+    width: 858px;
+    height: 263px;
+    top: 212px;
+    left: 55px;
+  }
+  
+  .checkout-page .group-4 {
+    position: absolute;
+    width: 390px;
+    height: 92px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .text-wrapper-3 {
+    position: absolute;
+    width: 280px;
+    top: 0;
+    left: 21px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 31px;
+    letter-spacing: 1.55px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .div-wrapper {
+    position: absolute;
+    width: 390px;
+    height: 50px;
+    top: 42px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-group-2 {
+    position: relative;
+    width: 394px;
+    height: 56px;
+    top: -3px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 57px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .text-wrapper-4 {
+    position: absolute;
+    width: 341px;
+    top: 17px;
+    left: 24px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-5 {
+    position: absolute;
+    width: 405px;
+    height: 86px;
+    top: 0;
+    left: 455px;
+  }
+  
+  .checkout-page .text-wrapper-5 {
+    width: 306px;
+    left: 1px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 31px;
+    letter-spacing: 1.55px;
+    position: absolute;
+    top: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-6 {
+    position: absolute;
+    width: 403px;
+    height: 38px;
+    top: 48px;
+    left: 0;
+  }
+  
+  .checkout-page .group-7 {
+    position: absolute;
+    width: 193px;
+    height: 38px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .rectangle {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: -3px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 57px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .text-wrapper-6 {
+    position: absolute;
+    width: 136px;
+    top: 11px;
+    left: 55px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-8 {
+    position: absolute;
+    width: 189px;
+    height: 38px;
+    top: 0;
+    left: 216px;
+  }
+  
+  .checkout-page .text-wrapper-7 {
+    position: absolute;
+    width: 132px;
+    top: 11px;
+    left: 55px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-9 {
+    position: absolute;
+    width: 390px;
+    height: 96px;
+    top: 167px;
+    left: 0;
+  }
+  
+  .checkout-page .text-wrapper-8 {
+    width: 333px;
+    left: 19px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 31px;
+    letter-spacing: 1.55px;
+    position: absolute;
+    top: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-10 {
+    position: absolute;
+    width: 390px;
+    height: 52px;
+    top: 44px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-group-3 {
+    position: relative;
+    width: 394px;
+    height: 58px;
+    top: -3px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 57px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .text-wrapper-9 {
+    width: 356px;
+    top: 17px;
+    left: 21px;
+    position: absolute;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-11 {
+    position: absolute;
+    width: 412px;
+    height: 96px;
+    top: 167px;
+    left: 413px;
+  }
+  
+  .checkout-page .text-wrapper-10 {
+    width: 174px;
+    top: 0;
+    left: 0;
+    font-family: "Oliver", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 31px;
+    text-align: center;
+    letter-spacing: 1.55px;
+    position: absolute;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-12 {
+    position: absolute;
+    width: 368px;
+    height: 52px;
+    top: 44px;
+    left: 42px;
+  }
+  
+  .checkout-page .overlap-2 {
+    position: relative;
+    height: 52px;
+  }
+  
+  .checkout-page .group-13 {
+    position: absolute;
+    width: 368px;
+    height: 52px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .line-wrapper {
+    position: relative;
+    width: 374px;
+    height: 57px;
+    top: -2px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 57px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .img {
+    position: absolute;
+    width: 3px;
+    height: 52px;
+    top: -1px;
+    left: 80px;
+  }
+  
+  .checkout-page .group-14 {
+    position: absolute;
+    width: 231px;
+    height: 27px;
+    top: 14px;
+    left: 19px;
+  }
+  
+  .checkout-page .text-wrapper-11 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .text-wrapper-12 {
+    top: 1px;
+    left: 135px;
+    position: absolute;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-15 {
+    position: absolute;
+    width: 714px;
+    height: 1429px;
+    top: 182px;
+    left: 995px;
+  }
+  
+  .checkout-page .group-16 {
+    position: absolute;
+    width: 720px;
+    height: 1287px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-3 {
+    position: relative;
+    width: 716px;
+    height: 1289px;
+    top: -1px;
+    left: -1px;
+    background-color: #ffffff;
+    border-radius: 101px;
+    border: 1px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .text-wrapper-13 {
+    position: absolute;
+    width: 504px;
+    top: 53px;
+    left: 49px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 65px;
+    letter-spacing: 3.25px;
+    line-height: normal;
+  }
+  
+  .checkout-page .overlap-4 {
+    position: absolute;
+    width: 556px;
+    height: 79px;
+    top: 1108px;
+    left: 74px;
+  }
+  
+  .checkout-page .text-wrapper-14 {
+    position: absolute;
+    width: 556px;
+    top: 0;
+    left: 0;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 55px;
+    letter-spacing: 2.75px;
+    line-height: normal;
+  }
+  
+  .checkout-page .text-wrapper-15 {
+    position: absolute;
+    width: 324px;
+    height: 57px;
+    top: 0;
+    left: 232px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 50px;
+    text-align: right;
+    letter-spacing: 2.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-17 {
+    position: absolute;
+    width: 616px;
+    height: 18px;
+    top: 162px;
+    left: 49px;
+  }
+  
+  .checkout-page .overlap-5 {
+    position: relative;
+    height: 18px;
+  }
+  
+  .checkout-page .line-2 {
+    position: absolute;
+    width: 616px;
+    height: 5px;
+    top: 8px;
+    left: 0;
+  }
+  
+  .checkout-page .group-18 {
+    position: absolute;
+    width: 32px;
+    height: 18px;
+    top: 0;
+    left: 292px;
+  }
+  
+  .checkout-page .overlap-group-4 {
+    position: relative;
+    width: 40px;
+    height: 26px;
+    top: -4px;
+    left: -4px;
+  }
+  
+  .checkout-page .ellipse {
+    position: absolute;
+    width: 19px;
+    height: 22px;
+    top: 2px;
+    left: 21px;
+    background-color: #4f596cb2;
+    border-radius: 9.52px / 11.05px;
+  }
+  
+  .checkout-page .ellipse-2 {
+    position: absolute;
+    width: 19px;
+    height: 22px;
+    top: 2px;
+    left: 0;
+    background-color: #4f596cb2;
+    border-radius: 9.52px / 11.05px;
+  }
+  
+  .checkout-page .ellipse-3 {
+    position: absolute;
+    width: 22px;
+    height: 26px;
+    top: 0;
+    left: 9px;
+    background-color: #4f596cb2;
+    border-radius: 10.93px / 12.86px;
+  }
+  
+  .checkout-page .line-3 {
+    position: absolute;
+    width: 574px;
+    height: 2px;
+    top: 1059px;
+    left: 70px;
+  }
+  
+  .checkout-page .group-19 {
+    position: absolute;
+    width: 436px;
+    height: 92px;
+    top: 915px;
+    left: 73px;
+  }
+  
+  .checkout-page .group-20 {
+    position: absolute;
+    width: 436px;
+    height: 50px;
+    top: 42px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-6 {
+    position: relative;
+    width: 434px;
+    height: 50px;
+  }
+  
+  .checkout-page .group-21 {
+    position: absolute;
+    width: 434px;
+    height: 50px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .vector-wrapper {
+    position: relative;
+    width: 440px;
+    height: 56px;
+    top: -3px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 57px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .vector {
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    top: 20px;
+    left: 384px;
+  }
+  
+  .checkout-page .text-wrapper-16 {
+    width: 381px;
+    top: 17px;
+    left: 27px;
+    font-family: "Oliver", Helvetica;
+    color: #21435b;
+    letter-spacing: 1.50px;
+    position: absolute;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-22 {
+    position: absolute;
+    width: 544px;
+    height: 73px;
+    top: 1356px;
+    left: 103px;
+  }
+  
+  .checkout-page .overlap-7 {
+    position: relative;
+    width: 542px;
+    height: 73px;
+    background-color: #f5cf6c;
+    border-radius: 86px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .checkout-page .text-wrapper-17 {
+    position: absolute;
+    width: 158px;
+    top: 26px;
+    left: 190px;
+    font-family: "Libre Baskerville-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-23 {
+    position: absolute;
+    width: 944px;
+    height: 478px;
+    top: 814px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-8 {
+    position: relative;
+    width: 946px;
+    height: 480px;
+    top: -1px;
+    left: -1px;
+    background-color: #ffffff;
+    border-radius: 101px;
+    border: 1px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .group-24 {
+    position: relative;
+    width: 805px;
+    height: 343px;
+    top: 67px;
+    left: 55px;
+  }
+  
+  .checkout-page .group-25 {
+    position: absolute;
+    width: 807px;
+    height: 180px;
+    top: 163px;
+    left: 0;
+  }
+  
+  .checkout-page .text-wrapper-18 {
+    position: absolute;
+    width: 390px;
+    top: 0;
+    left: 21px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 31px;
+    letter-spacing: 1.55px;
+    line-height: normal;
+  }
+  
+  .checkout-page .group-26 {
+    position: absolute;
+    width: 807px;
+    height: 127px;
+    top: 53px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-group-5 {
+    position: relative;
+    width: 811px;
+    height: 133px;
+    top: -3px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 35px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .p {
+    position: absolute;
+    width: 487px;
+    top: 19px;
+    left: 37px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-27 {
+    position: absolute;
+    width: 618px;
+    height: 92px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .text-wrapper-19 {
+    position: absolute;
+    width: 388px;
+    top: 0;
+    left: 21px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 31px;
+    letter-spacing: 1.55px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-28 {
+    position: absolute;
+    width: 618px;
+    height: 50px;
+    top: 42px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-group-6 {
+    position: relative;
+    width: 622px;
+    height: 56px;
+    top: -3px;
+    left: -3px;
+    background-color: #fff8e8;
+    border-radius: 57px;
+    border: 3px solid;
+    border-color: #21435b;
+  }
+  
+  .checkout-page .text-wrapper-20 {
+    width: 541px;
+    top: 17px;
+    left: 38px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #21435b;
+    font-size: 30px;
+    letter-spacing: 1.50px;
+    position: absolute;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-29 {
+    position: absolute;
+    width: 1957px;
+    height: 495px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .group-30 {
+    position: absolute;
+    width: 1955px;
+    height: 263px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .maison-burro-logo {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    top: 0;
+    left: 852px;
+    object-fit: cover;
+  }
+  
+  .checkout-page .group-31 {
+    position: absolute;
+    width: 1955px;
+    height: 44px;
+    top: 219px;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-9 {
+    position: relative;
+    width: 1920px;
+    height: 44px;
+    left: 17px;
+  }
+  
+  .checkout-page .line-4 {
+    position: absolute;
+    width: 1920px;
+    height: 15px;
+    top: 18px;
+    left: 0;
+  }
+  
+  .checkout-page .group-32 {
+    position: absolute;
+    width: 102px;
+    height: 44px;
+    top: 0;
+    left: 910px;
+  }
+  
+  .checkout-page .overlap-group-7 {
+    position: relative;
+    width: 110px;
+    height: 52px;
+    top: -4px;
+    left: -4px;
+  }
+  
+  .checkout-page .ellipse-4 {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 4px;
+    left: 67px;
+    background-color: #4f596c;
+    border-radius: 21.5px;
+  }
+  
+  .checkout-page .ellipse-5 {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 4px;
+    left: 0;
+    background-color: #4f596c;
+    border-radius: 21.5px;
+  }
+  
+  .checkout-page .ellipse-6 {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 29px;
+    background-color: #4f596c;
+    border-radius: 26px;
+  }
+  
+  .checkout-page .text-wrapper-21 {
+    position: absolute;
+    top: 301px;
+    left: 107px;
+    font-family: "Oliver", Helvetica;
+    font-weight: 400;
+    color: #485686;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-33 {
+    position: absolute;
+    width: 257px;
+    height: 115px;
+    top: 380px;
+    left: 191px;
+  }
+  
+  .checkout-page .text-wrapper-22 {
+    top: 76px;
+    left: 196px;
+    font-family: "Abhaya Libre", serif;
+    color: #28385a;
+    letter-spacing: 0;
+    position: absolute;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .checkout-page .group-34 {
+    position: absolute;
+    width: 175px;
+    height: 115px;
+    top: 0;
+    left: 0;
+  }
+  
+  .checkout-page .overlap-10 {
+    position: relative;
+    height: 115px;
+  }
+  
+  .checkout-page .group-35 {
+    position: absolute;
+    width: 175px;
+    height: 42px;
+    top: 73px;
+    left: 0;
+  }
+  
+  .checkout-page .arrow-wrapper {
+    position: relative;
+    width: 181px;
+    height: 48px;
+    top: -3px;
+    left: -3px;
+    background-image: url(./img/rectangle-6513.svg);
+    background-size: 100% 100%;
+  }
+  
+  .checkout-page .arrow {
+    position: absolute;
+    width: 180px;
+    height: 48px;
+    top: 2px;
+    left: 10px;
+  }
+  
+  .checkout-page .group-36 {
+    position: absolute;
+    width: 71px;
+    height: 75px;
+    top: 0;
+    left: 85px;
+  }
+  
+  .checkout-page .overlap-11 {
+    position: relative;
+    height: 77px;
+    top: -1px;
+  }
+  
+  .checkout-page .ellipse-7 {
+    position: absolute;
+    width: 71px;
+    height: 56px;
+    top: 16px;
+    left: 0;
+  }
+  
+  .checkout-page .group-37 {
+    position: absolute;
+    width: 58px;
+    height: 32px;
+    top: 37px;
+    left: 7px;
+  }
+  
+  .checkout-page .overlap-group-8 {
+    position: relative;
+    width: 59px;
+    height: 34px;
+    top: -1px;
+    background-image: url(./img/vector-2580.png);
+    background-size: 100% 100%;
+  }
+  
+  .checkout-page .group-38 {
+    position: relative;
+    width: 36px;
+    height: 6px;
+    top: 16px;
+    left: 12px;
+  }
+  
+  .checkout-page .ellipse-8 {
+    position: absolute;
+    width: 6px;
+    height: 4px;
+    top: 1px;
+    left: 0;
+  }
+  
+  .checkout-page .ellipse-9 {
+    position: absolute;
+    width: 6px;
+    height: 4px;
+    top: 0;
+    left: 30px;
+  }
+  
+  .checkout-page .vector-2 {
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    top: 3px;
+    left: 15px;
+  }
+  
+  .checkout-page .ellipse-10 {
+    position: absolute;
+    width: 18px;
+    height: 16px;
+    top: 61px;
+    left: 52px;
+    background-color: #f8f5dd;
+    border-radius: 8.98px / 7.86px;
+    border: 1.7px solid;
+    border-color: #20394a;
+  }
+  
+  .checkout-page .ellipse-11 {
+    position: absolute;
+    width: 18px;
+    height: 16px;
+    top: 61px;
+    left: 2px;
+    background-color: #f8f5dd;
+    border-radius: 8.98px / 7.86px;
+    border: 1.7px solid;
+    border-color: #20394a;
+  }
+  
+  .checkout-page .group-39 {
+    position: absolute;
+    width: 25px;
+    height: 22px;
+    top: 0;
+    left: 23px;
+  }
+  
+
+
+
+  /* General input field styling */
+input[type="text"] {
+    width: 100%; /* Ensures the input spans the container */
+    height: 100%; /* Matches the height of the rectangle */
+    border: none; /* Removes the default border */
+    outline: none; /* Removes the focus outline */
+    background-color: transparent; /* Makes the background transparent to reveal the rectangle */
+    font-family: inherit; /* Ensures the font matches the surrounding text */
+    font-size: 16px; /* Adjust as needed for your design */
+    color: #000; /* Text color (adjust to match your design) */
+    padding: 10px; /* Adjust padding to match rectangle's inner spacing */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+  }
+  
+  /* Placeholder styling */
+  input[type="text"]::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+    opacity: 0; /* Ensures visibility */
+  }
+  
+  /* Ensures input blends seamlessly when inside overlap-group containers */
+  .overlap-group-5 input,
+  .overlap-group-6 input {
+    position: absolute; /* Positions the input to overlap */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Centers text within the field */
+  }
+  
+  /* Optional: Add hover or focus styles */
+  input[type="text"]:hover {
+    border: 1px solid #ccc; /* Subtle border on hover for better visibility */
+  }
+  
+  input[type="text"]:focus {
+    border: 1px solid #007bff; /* Highlight border on focus */
+    background-color: #f9f9f9; /* Slightly lighter background */
+  }
+
+
+  input[type="text"] {
+    text-align: left; /* Aligns the text to the left */
+    padding-left: 20px; /* Optional: Adds some space between the text and the input's border */
+    font-family: "Oliver", Helvetica; /* Ensures the font matches the design */
+    font-size: 22px; /* Adjust based on your design */
+    color: #21435B; /* Text color */
+    width: 100%; /* Ensures it spans the container */
+    height: 100%; /* Matches the height of the rectangle */
+    border: none; /* Removes border for cleaner design */
+    outline: none; /* Removes focus outline */
+    background-color: transparent; /* Keeps the background transparent */
+    box-sizing: border-box; /* Ensures padding is included in width and height */
+  }
+  
+
+
+  /* Style the radio button container */
+.group-6 {
+    display: flex;
+    gap: 5px; /* Spacing between radio buttons */
+    align-items: center;
+  }
+  
+  /* Hide the default radio button */
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    display: inline-block;
+    width: 22px; /* Adjust size */
+    height: 22px; /* Adjust size */
+    margin: -15;
+    top: 10px;
+    left: 13px;
+    border: 3px solid #21435B; /* Border to match the rectangle's design */
+    border-radius: 50%; /* Makes it circular */
+    background-color: #f9f9f9; /* Matches the background color */
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Add hover effect */
+  input[type="radio"]:hover {
+    border-color: #007bff; /* Highlight border on hover */
+  }
+  
+  /* Add checked state styling */
+  input[type="radio"]:checked {
+    background-color: #007bff; /* Background color when selected */
+    border-color: #007bff; /* Border matches the background */
+  }
+  
+  /* Add a dot to indicate selection */
+  input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px; /* Smaller circle for the dot */
+    height: 10px; /* Matches width */
+    background-color: white; /* Dot color */
+    border-radius: 50%;
+  }
+  
+  /* Style the labels */
+  label {
+    font-family: inherit;
+    font-size: 16px; /* Adjust font size */
+    color: #000; /* Text color */
+    cursor: pointer; /* Pointer cursor for better UX */
+  }
+  
+
+
+  /* Style the dropdown container */
+.payment-method-dropdown {
+    width: 120%; /* Adjust width to fit the container */
+    height: 60px; /* Height of the dropdown */
+    padding: 10px 14px; /* Inner spacing for the text */
+    font-family: "Oliver", Helvetica; /* Matches the website font */
+    font-size: 22px; /* Adjust font size */
+    color: #21435B; /* Text color */
+    border: 2px solid #21435B; /* Border color matching the design */
+    border-radius: 50px; /* Rounded corners for a modern look */
+    background-color: #f9f9f9; /* Background color matching the website */
+    appearance: none; /* Hides the default dropdown arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    cursor: pointer;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Add hover effect */
+  .payment-method-dropdown:hover {
+    border-color: #007bff; /* Highlight border on hover */
+    background-color: #ffffff; /* Slightly lighter background */
+  }
+  
+  /* Add focus effect */
+  .payment-method-dropdown:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Removes the default outline */
+  }
+  
+  /* Style the dropdown arrow */
+  .payment-method-dropdown::after {
+    content: "▼"; /* Unicode for a down arrow */
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent arrow from blocking clicks */
+    font-size: 12px;
+    color: #000;
+  }
+  
+  /* Optional: Wrap the dropdown for arrow alignment */
+  .select-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .select-container .payment-method-dropdown {
+    padding-right: 32px; /* Extra space for the custom arrow */
+  }
+  
+
+
+  /* General Button Styling */
+.checkout-button {
+    display: inline-block;
+    width: 100%; /* Adjust width as per container */
+    height: 80px; /* Height for the button */
+    font-family: inherit; /* Matches the website font */
+    font-size: 22px; /* Adjust font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #000000; /* White text color */
+    text-align: center; /* Centers the text */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    background-color: #F5CF6C; /* Primary button color */
+    border: none; /* Removes default borders */
+    border-radius: 50px; /* Rounded corners for a modern look */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Hover Effect */
+  .checkout-button:hover {
+    background-color: #e2ba1b; /* Darker shade on hover */
+  }
+  
+  /* Active Effect */
+  .checkout-button:active {
+    background-color: #eed983; /* Even darker shade for click effect */
+    transform: scale(0.98); /* Slightly shrink on click */
+  }
+  
+  /* Disabled State */
+  .checkout-button:disabled {
+    background-color: #cccccc; /* Greyed out background */
+    color: #666666; /* Lighter text color */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+    box-shadow: none; /* Remove shadow for a flat look */
+  }
+  

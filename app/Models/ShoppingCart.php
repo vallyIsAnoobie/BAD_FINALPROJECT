@@ -8,7 +8,10 @@ class ShoppingCart extends Model
 {
     use HasFactory;
 
-    // Table name and primary key
+    // Specify the table name if it differs from the model name convention
+    protected $table = 'shoppingcart'; // Ensure this matches your actual table name
+
+    // Primary key for the table
     protected $primaryKey = 'shoppingCartID';
 
     // Fillable fields for mass assignment
