@@ -16,27 +16,18 @@ class ChristmasBurroController extends Controller
             return redirect()->route('login');
         }
         
-        // Retrieve the existing shopping cart ID from the database for the logged-in customer
-        $shoppingCartID = DB::table('shoppingcart')
-            ->where('customerID', $customerID)
-            ->value('shoppingCartID');  // This retrieves the shoppingCartID directly
+        // Get the shoppingCartID from the session
+        $shoppingCartID = session('shoppingCartID');
         
-        // If no shoppingCartID is found, create a new one
         if (!$shoppingCartID) {
-            $shoppingCartID = $this->createNewCart($customerID); // Create a new cart
+            // Handle case where shoppingCartID is not in session
+            return redirect()->route('some.error.route'); // Define where to redirect or what to do
         }
-
-        // Store the shoppingCartID in the session
-        session(['shoppingCartID' => $shoppingCartID]);
+    
         
-        // Get the customer's cart items (e.g., for display purposes)
-        $shoppingCartItems = DB::table('shoppingcartdetails')
-            ->where('shoppingCartID', $shoppingCartID)
-            ->get();
-        
-        return view('christmasburro', ['shoppingCartItems' => $shoppingCartItems]);
+        return view('christmasburro');
     }
-
+    
     // Method to handle adding product to the cart
     public function addToCart(Request $request)
     {
@@ -52,48 +43,40 @@ class ChristmasBurroController extends Controller
             'shoppingCartID' => $shoppingCartID,
             'productID' => $productID,
             'quantity' => $quantity,
-            'detailID' => $this->generateDetailID(), // Optionally generate a unique detail ID
+            'cartdetails_id' => $this->generateDetailID(), // Generate a unique detail ID
         ]);
+        if (!$shoppingCartID) {
+            // Handle the case where the shoppingCartID is not set in the session
+            return redirect()->route('error.page');  // Redirect or show an error
+        }
+        
         
         // Redirect back or show a success message
-        return redirect()->route('shoppingCart.show'); // Or wherever you want to redirect
+        return redirect()->route('shoppingcart'); // Or wherever you want to redirect
     }
 
-    // Helper method to create a new shopping cart
-    private function createNewCart($customerID)
-    {
-        // Generate a unique shoppingCartID for the new cart
-        $shoppingCartID = 'SC' . uniqid();
-        
-        // Insert the new shopping cart into the database
-        DB::table('shoppingcart')->insert([
-            'shoppingCartID' => $shoppingCartID,
-            'customerID' => $customerID,
-        ]);
-        
-        return $shoppingCartID;
-    }
 
-    // Helper method to generate a unique detail ID for each cart detail (optional)
+
+    // Helper method to generate a unique detail ID for each cart detail
     private function generateDetailID()
     {
-        // Get the highest detailID from the shoppingcartdetails table
+        // Get the highest cartdetails_id from the shoppingcartdetails table
         $lastDetailID = DB::table('shoppingcartdetails')
-                         ->orderBy('detailID', 'desc')
-                         ->value('detailID');
-        
-        // If there are no records, start with 'CD001'
+                         ->orderBy('cartdetails_id', 'desc')
+                         ->value('cartdetails_id');
+    
+        // If there are no records, start with 'DI0001'
         if (!$lastDetailID) {
-            return 'CD001';
+            return 'DI0001';
         }
     
-        // Extract the numeric part from the last detailID
-        $lastNumber = (int) substr($lastDetailID, 2); // Remove 'CD' and convert to int
-        
+        // Extract the numeric part from the last detailID (e.g., 'DI0001' -> 1)
+        $lastNumber = (int) substr($lastDetailID, 2); // Remove 'DI' prefix and convert to int
+    
         // Increment the number
         $newNumber = $lastNumber + 1;
-        
+    
         // Format the new number with leading zeros
-        return 'CD' . str_pad($newNumber, 3, '0', STR_PAD_LEFT); // Pad with leading zeros to make it 3 digits
-    }    
+        return 'CD' . str_pad($newNumber, 3, '0', STR_PAD_LEFT); // Pad with leading zeros to make it 4 digits
+    }
 }

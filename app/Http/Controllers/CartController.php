@@ -7,6 +7,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -48,7 +49,6 @@ class CartController extends Controller
                 ->select('shoppingCartDetails.*', 'product.productName', 'product.productID', 'product.productPrice', 'product.productImage')
                 ->get();
 
-            // Loop through the shoppingCartDetails to encode the image data
             foreach ($shoppingCartDetails as $detail) {
                 $detail->productImage = $detail->productImage ? base64_encode($detail->productImage) : 'default-image-base64-string';
             }
@@ -119,4 +119,35 @@ class CartController extends Controller
         // Redirect back with success message
         return redirect()->back()->with('success', 'Cart updated successfully.');
     }
+    public function showCart(Request $request)
+{
+    // Assuming you fetch the shopping cart data here
+    $customer = Auth::guard('customer')->user();
+
+    if (!$customer) {
+        return redirect()->route('login')->withErrors(['msg' => 'You need to be logged in to view the cart.']);
+    }
+
+    $shoppingCart = DB::table('shoppingCart')
+        ->where('customerID', $customer->customerID)
+        ->first();
+
+    if (!$shoppingCart) {
+        return redirect()->back()->withErrors(['msg' => 'Your cart is empty.']);
+    }
+
+    // Fetch the shopping cart details
+    $shoppingCartDetails = DB::table('shoppingCartDetails')
+        ->join('product', 'shoppingCartDetails.productID', '=', 'product.productID')
+        ->where('shoppingCartDetails.shoppingCartID', '=', $shoppingCart->shoppingCartID)
+        ->select('shoppingCartDetails.*', 'product.productName', 'product.productID', 'product.productPrice', 'product.productImage')
+        ->get();
+
+    // Store the cart data in the session
+    session()->put('shoppingCartDetails', $shoppingCartDetails);
+
+    // Pass the shopping cart data to the view
+    return view('cart.show', ['shoppingCartDetails' => $shoppingCartDetails]);
+}
+
 }

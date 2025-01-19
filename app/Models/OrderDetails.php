@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrderDetails extends Model
 {
+
     use HasFactory;
 
     // Table name and primary key
@@ -40,4 +41,11 @@ class OrderDetails extends Model
     {
         return $this->belongsTo(ShoppingCart::class, 'shoppingCartID', 'shoppingCartID');
     }
+
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class, 'customerID');
+    }
 }
+

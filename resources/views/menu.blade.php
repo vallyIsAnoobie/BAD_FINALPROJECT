@@ -1,10 +1,11 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="menu.css" />
+ 
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
   </head>
   <body>
     <div class="menu-page">
@@ -50,7 +51,7 @@
                 <div class="sticky-background">
                   <div class="overlap-group-3">
                     <img class="subtract" src="img/subtract.png" />
-                    <img class="rectangle-4" src="img/rectangle 2.png" />
+                    <img class="rectangle-4" src="img/rectangle 2 (1).png" />
                   </div>
                 </div>
                 <div class="text">📍Delivery Note</div>
@@ -68,7 +69,7 @@
               <div class="voting-placeholder-7"><div class="ellipse-2"></div></div>
             </div>
             <p class="your-package-will-be">
-              <br /><br /><br />Your package will be dispatched via Gojek or GoCar and is expected to arrive within 2-3
+              <br /><br /><br />Your package will be dispatched via Gojek or GoCar and is expected to arrive within 2-3
               days. You can easily track your delivery in real-time using the Gojek app. The tracking link will be send
               right after the order is delivered. <br />Thank you!
             </p>
@@ -76,7 +77,7 @@
             <p class="delivery-method">
               <span class="text-wrapper-8"><br /></span>
               <span class="text-wrapper-9">Delivery Method</span>
-              <span class="text-wrapper-8">: Gojek / GoCar</span>
+              <span class="text-wrapper-8">: Gojek / GoCar</span>
             </p>
           </div>
         </div>
@@ -87,27 +88,42 @@
                 <img class="vector-3" src="img/vector 2528.png" />
                 <img class="vector-4" src="img/vector 2529.png" />
                 <div class="group-2">
-                  <div class="page"><div class="text-wrapper-10">Home</div></div>
+                  <div class="page">
+                  <a href ="{{ route('home') }} class="text-wrapper-10">Home</a></div>
                   <div class="page-2">
                     <div class="overlap-group-4">
                       <div class="ellipse-3"></div>
                       <div class="home">Menu</div>
                     </div>
                   </div>
-                  <div class="home-wrapper"><div class="home-2">Orders</div></div>
-                  <div class="page-3"><div class="home-3">Merchandise</div></div>
+                  <div class="home-wrapper">
+                  <a href ="{{ route('order') }}" class="home-2">Orders</a></div>
+                  <div class="page-3">
+                  <a href ="{{ route('merchandise') }}" class="home-3">Merchandise</a>  
+                  </div>
                 </div>
               </div>
             </div>
             <div class="group-3">
               <img class="group-4" src="img/group 631796 1.png" />
               <div class="group-wrapper">
-                <div class="group-5"><div class="text-wrapper-11">Login</div></div>
+
+              <div class="group-5">
+    @if(!empty($firstName))
+        <div class="text-wrapper-11">{{ $firstName }}</div>
+    @else
+  Login
+    @endif
+</div>
+
               </div>
             </div>
             <div class="group-6">
               <img class="group-7" src="img/group 631785 1.png" />
-              <div class="group-8"><div class="text-wrapper-12">cart</div></div>
+              <div class="group-8">
+              <a href ="{{ route('shoppingcart') }}" class="text-wrapper-12">cart</a>
+
+             </div>
             </div>
           </div>
           <div class="overlap-4">
@@ -164,7 +180,8 @@
         <div class="group-22">
           <div class="group-23">
             <div class="group-24">
-              <div class="overlap-10">
+            <a href ="{{ route('christmasburro') }}" class="overlap-10"> 
+
                 <div class="rectangle-6"></div>
                 <img class="rectangle-7" src="img/rectangle 6523 8.png" />
                 <div class="group-25">
@@ -186,7 +203,7 @@
                 </p>
                 <img class="vector-9" src="img/vector 2568 7.png" />
                 <div class="text-wrapper-20">PRE-ORDER NOW!</div>
-              </div>
+                </a>
             </div>
             <div class="group-27">
               <div class="overlap-10">
@@ -300,7 +317,7 @@
                 <img class="rectangle-7" src="img/rectangle 6523 2.png" />
                 <div class="group-25">
                   <div class="overlap-11">
-                    <img class="line" src="img/line 7.png" />
+                    <img class="line" src="img/line 7 1.png" />
                     <div class="group-26">
                       <div class="overlap-group-8">
                         <div class="ellipse-20"></div>
@@ -312,16 +329,16 @@
                 </div>
                 <div class="text-wrapper-30">Furutu Christmas</div>
                 <p class="div-2">
-                  <span class="text-wrapper-31">This concludes our  </span>
+                  <span class="text-wrapper-31">This concludes our  </span>
                   <a
                     href="https://www.instagram.com/explore/tags/burroxfurutu/?hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
                     ><span class="text-wrapper-32">#BurroxFurutu</span></a
                   >
-                  <span class="text-wrapper-31">  Christmas edition! It’s been so lovely collaborating with @</span>
+                  <span class="text-wrapper-31">  Christmas edition! It’s been so lovely collaborating with @</span>
                   <a href="https://www.instagram.com/furutusando/?hl=en" target="_blank" rel="noopener noreferrer"
-                    ><span class="text-wrapper-32">furutusando </span></a
+                    ><span class="text-wrapper-32">furutusando </span></a
                   >
                   <span class="text-wrapper-31"> and we can’t wait to create more delish packages together again!</span>
                 </p>
@@ -422,8 +439,6 @@
               <div class="copyright"><p class="text-wrapper-37">© 2021 All Rights Reserved</p></div>
               <img class="group-39" src="img/group 631786.png" />
               <div class="overlap-group-9">
-                <div class="group-40"><img class="vector-12" src="img/vector 3.png" /></div>
-                <div class="group-41"><img class="vector-13" src="img/vector.png" /></div>
                 <div class="group-42">
                   <div class="text-wrapper-38">Follow us!</div>
                   <div class="frame">
@@ -436,7 +451,6 @@
             <div class="group-43">
               <div class="social-2"></div>
               <div class="social-3"></div>
-              <div class="group-44"><img class="vector-14" src="img/vector 2.png" /></div>
               <div class="group-45"><img class="group-46" src="img/group 631934.png" /></div>
             </div>
             <div class="group-47">
@@ -466,7 +480,6 @@
             </div>
             <img class="maison-burro-logo" src="img/maison burro logo white 1.png" />
           </div>
-          <img class="instagram" src="img/instagram.png" />
         </footer>
       </div>
     </div>

@@ -20,7 +20,7 @@
       document.getElementById('seconds').innerText = seconds;
     } else {
       clearInterval(countdown);
-      document.querySelector('.text-wrapper-8').innerText = "Countdown finished!";
+      document.querySelector('.text-wrapper-8').innerText = "Pre-Order Open!";
     }
   }, 1000);
 
@@ -89,9 +89,6 @@ $(function() {
           // Change flag to 0
           flag = 0;
       }
-
-      // Share functionality can be implemented here (optional)
-      // For now, we log a message for debugging purposes
       console.log('Share button clicked!');
   });
 });

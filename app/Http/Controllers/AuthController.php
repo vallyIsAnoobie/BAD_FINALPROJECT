@@ -124,9 +124,7 @@ class AuthController extends Controller
         if ($customer) {
             // Retrieve the customer details using customerID
             $customerData = Customer::where('customerID', $customer->customerID)->first();
-        
-            // Pass the first name to the session if customerData is found
-            if ($customerData) {
+                    if ($customerData) {
                 $fullName = $customerData->customerName;
                 $firstName = explode(' ', $fullName)[0]; // Get the first part of the name
                 session(['firstName' => $firstName]); // Store firstName in session

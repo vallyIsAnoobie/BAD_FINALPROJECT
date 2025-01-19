@@ -154,7 +154,62 @@
     letter-spacing: 1.55px;
     line-height: normal;
   }
-  
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 0px solid;
+    padding: 8px;
+    text-align: left;
+    font-family: "Inter",sans-serif;
+    color: #21435b;
+    font-size: 25px;
+    font-weight: 500;
+}
+/* Styling for the first column (order number) */
+td:nth-child(2) {
+  padding-right: -19px;
+}
+
+td:nth-child(3) {
+  padding-right: 104px;
+}
+
+
+
+/* Styling for price column */
+td:nth-child(5) {
+  text-align: right; /* Right-align the price column */
+  font-weight: bold;
+  padding-left: 90px;
+  color: #4CAF50; /* Green color for price */
+}
+
+/* Styling for total items column */
+td:nth-child(4) {
+  text-align: center; /* Center-align the total items column */
+  font-weight: bold;
+  color: #000;
+}
+
+/* Styling for the status column */
+td:nth-child(6) {
+  font-weight: bold;
+  padding-left: 29px;
+  padding-right: 60px;
+  text-align: right;
+}
+
+/* Styling for the first column (order number) */
+td:nth-child(1) {
+  padding-left: 43px;
+}
+
   .empty-order-page .div-wrapper {
     width: 254px;
     top: 30px;
@@ -727,7 +782,7 @@ cursor:pointer;
   .empty-order-page .text-wrapper-19 {
     position: absolute;
     width: 85px;
-    top: 5px;
+    top: 16px;
     left: 32px;
     font-family: "Abhaya Libre", serif;
     font-weight: 400;
@@ -740,8 +795,8 @@ cursor:pointer;
   .empty-order-page .text-wrapper-20 {
     position: absolute;
     width: 111px;
-    top: 5px;
-    left: 117px;
+    top: 16px;
+    left: 180px;
     font-family: "Abhaya Libre", serif;
     font-weight: 800;
     color: #21435b;
@@ -754,8 +809,8 @@ cursor:pointer;
   .empty-order-page .text-wrapper-21 {
     position: absolute;
     width: 257px;
-    top: 5px;
-    left: 342px;
+    top: 16px;
+    left: 399px;
     font-family: "Abhaya Libre", serif;
     font-weight: 700;
     color: #21435b;
@@ -768,7 +823,7 @@ cursor:pointer;
     left: 662px;
     position: absolute;
     width: 257px;
-    top: 5px;
+    top: 16px;
     font-family: "Abhaya Libre", serif;
     font-weight: 700;
     color: #21435b;
@@ -782,7 +837,7 @@ cursor:pointer;
     left: 1020px;
     position: absolute;
     width: 257px;
-    top: 5px;
+    top: 16px;
     font-family: "Abhaya Libre", serif;
     font-weight: 700;
     color: #21435b;
@@ -795,7 +850,7 @@ cursor:pointer;
   .empty-order-page .text-wrapper-24 {
     position: absolute;
     width: 193px;
-    top: 5px;
+    top: 16px;
     left: 1316px;
     font-family: "Abhaya Libre", serif;
     font-weight: 700;

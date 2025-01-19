@@ -22,9 +22,8 @@ class Order extends Model
     /**
      * Get the customer associated with this order.
      */
-    public function customer()
-    {
-        return $this->belongsTo(Customer::class, 'customerID', 'customerID');
+    public function customer() {
+        return $this->belongsTo(Customer::class, 'customerID');
     }
 
     /**
@@ -68,4 +67,5 @@ class Order extends Model
     {
         return $this->hasMany(OrderDetails::class, 'orderID');
     }
+
 }
